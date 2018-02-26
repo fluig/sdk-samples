@@ -24,13 +24,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     private OnClickListener mListener;
 
-    MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
+    /*package*/ MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
         mContext = new WeakReference<>(context);
         mTypes = types;
         mListener = listener;
     }
 
-    public void setTypes(ListItemType[] types) {
+    /*package*/ void setTypes(ListItemType[] types) {
         mTypes = types;
     }
 
@@ -65,11 +65,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         }
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    /*package*/ static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
 
-        ViewHolder(View view) {
+        /*package*/ ViewHolder(View view) {
             super(view);
 
             textView = view.findViewById(R.id.mainAdapter_textView);
