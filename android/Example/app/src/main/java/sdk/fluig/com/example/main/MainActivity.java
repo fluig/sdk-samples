@@ -52,10 +52,14 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
 
     //region Lists
     private void showListOfType(ListItemType type) {
+        ListItemType[] types;
+
         switch (type) {
             case FLOW:
+                types = ListItemType.allFlows();
                 break;
             case COMPONENTS:
+                types = ListItemType.allComponents();
                 break;
             default:
                 GuiUtils.showToast(MainActivity.this, R.string.list_item_mode_notfound);
