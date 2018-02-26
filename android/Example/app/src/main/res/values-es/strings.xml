@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Example</string>
+
+    <string name="list_item_mode_flows">Flujos</string>
+    <string name="list_item_mode_components">Components</string>
+    <string name="list_item_mode_notfound">El modo elegido no está implementado.</string>
+
+    <string name="list_item_flow_eula">Términos de Uso</string>
+    <string name="list_item_flow_notfound">El flujo elegido no está implementado.</string>
+
+    <string name="list_item_components_notfound">El componente elegido no está implementado.</string>
+</resources>
