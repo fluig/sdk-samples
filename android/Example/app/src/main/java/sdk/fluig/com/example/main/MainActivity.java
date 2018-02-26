@@ -1,8 +1,11 @@
 package sdk.fluig.com.example.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import sdk.fluig.com.bll.core.eula.EulaFlow;
+import sdk.fluig.com.bll.core.login.LoginFlow;
 import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.model.ListItemType;
 import sdk.fluig.com.example.utils.GuiUtils;
@@ -72,13 +75,23 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
     private void startFlowOfType(ListItemType type) {
         switch (type) {
             case LOGIN:
+                startLoginFlow();
                 break;
             case EULA:
+                startEulaFlow();
                 break;
             default:
                 GuiUtils.showToast(MainActivity.this, R.string.list_item_flow_notfound);
                 break;
         }
+    }
+
+    private void startLoginFlow() {
+        new LoginFlow(MainActivity.this, new Intent()).start();
+    }
+
+    private void startEulaFlow() {
+        new EulaFlow(MainActivity.this, "Example").start();
     }
     //endregion
 
