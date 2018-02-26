@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 
+import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.model.ListItemType;
 
 /**
@@ -23,10 +24,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     private OnClickListener mListener;
 
-    public MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
+    MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
         mContext = new WeakReference<>(context);
         mTypes = types;
         mListener = listener;
+    }
+
+    public void setTypes(ListItemType[] types) {
+        mTypes = types;
     }
 
     @Override
@@ -36,7 +41,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             return null;
         }
 
-        View view = LayoutInflater.from(context).inflate(0, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.adapter_main, parent, false);
         return new ViewHolder(view);
     }
 
@@ -67,7 +72,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         ViewHolder(View view) {
             super(view);
 
-            textView = view.findViewById(0);
+            textView = view.findViewById(R.id.mainAdapter_textView);
         }
     }
 
