@@ -25,6 +25,48 @@
             </intent-filter>
         </activity>
 
+        <!--SDK-->
+        <!--Login-->
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.email.view.EmailRequestActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.server.view.ServerRequestActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.password.view.PasswordRequestActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.forgot.view.ForgotPasswordActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.manual.view.ManualLoginActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.account.view.AccountSelectActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.mfa.view.MfaRequestActivity"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:screenOrientation="portrait" />
+
+        <!--EULA-->
+        <activity
+            android:name="sdk.fluig.com.bll.core.eula.accept.view.EulaAcceptActivity"
+            android:theme="@style/FluigEulaTheme.Light"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.eula.terms.view.EulaTermsActivity"
+            android:theme="@style/FluigEulaTheme.Light" />
+
     </application>
 
 </manifest>
