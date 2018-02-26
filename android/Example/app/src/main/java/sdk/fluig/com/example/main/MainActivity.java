@@ -3,6 +3,7 @@ package sdk.fluig.com.example.main;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -29,10 +30,15 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnCli
     //region Setups
     private void setupView() {
         mAdapter = new MainAdapter(MainActivity.this, ListItemType.allModes(), this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
 
         RecyclerView recyclerView = findViewById(R.id.mainActivity_recyclerView);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(
+                MainActivity.this,
+                layoutManager.getOrientation()
+        ));
         recyclerView.setAdapter(mAdapter);
     }
     //endregion
