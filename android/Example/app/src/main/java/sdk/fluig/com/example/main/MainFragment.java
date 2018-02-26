@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.model.ListItemType;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements MainAdapter.OnClickListener {
 
     private static final String ARG_LIST = "MainFragment.List";
 
@@ -68,6 +68,15 @@ public class MainFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+    //endregion
+
+    //region MainAdapter.OnClickListener
+    @Override
+    public void onClickItem(ListItemType itemType) {
+        if (mListener != null) {
+            mListener.onClickItem(itemType);
+        }
     }
     //endregion
 
