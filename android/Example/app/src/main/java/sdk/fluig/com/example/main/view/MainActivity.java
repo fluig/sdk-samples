@@ -1,4 +1,4 @@
-package sdk.fluig.com.example.main;
+package sdk.fluig.com.example.main.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

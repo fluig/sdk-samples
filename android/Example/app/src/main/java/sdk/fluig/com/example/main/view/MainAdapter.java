@@ -1,4 +1,4 @@
-package sdk.fluig.com.example.main;
+package sdk.fluig.com.example.main.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
