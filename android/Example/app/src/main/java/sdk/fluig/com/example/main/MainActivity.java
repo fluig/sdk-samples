@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.utils.GuiUtils;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.Listener {
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
             case COMPONENTS:
                 break;
             default:
+                GuiUtils.showToast(MainActivity.this, R.string.list_item_mode_notfound);
                 break;
         }
     }
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
             case EULA:
                 break;
             default:
+                GuiUtils.showToast(MainActivity.this, R.string.list_item_flow_notfound);
                 break;
         }
     }
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
             case THUMB:
             case WEB_VIEW:
             default:
+                GuiUtils.showToast(MainActivity.this, R.string.list_item_components_notfound);
                 break;
         }
     }
