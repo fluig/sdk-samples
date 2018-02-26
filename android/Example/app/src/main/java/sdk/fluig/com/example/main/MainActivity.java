@@ -3,6 +3,8 @@ package sdk.fluig.com.example.main;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import sdk.fluig.com.bll.core.eula.EulaFlow;
 import sdk.fluig.com.bll.core.login.LoginFlow;
@@ -10,17 +12,32 @@ import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.model.ListItemType;
 import sdk.fluig.com.example.utils.GuiUtils;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.Listener {
+public class MainActivity extends AppCompatActivity implements MainAdapter.OnClickListener {
+
+    private MainAdapter mAdapter;
 
     //region Lifecycle
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setupView();
     }
     //endregion
 
-    //region MainFragment.Listener
+    //region Setups
+    private void setupView() {
+        mAdapter = new MainAdapter(MainActivity.this, ListItemType.allModes(), this);
+
+        RecyclerView recyclerView = findViewById(R.id.mainActivity_recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setAdapter(mAdapter);
+    }
+    //endregion
+
+    //region MainAdapter.Listener
     @Override
     public void onClickItem(ListItemType itemType) {
         switch (itemType) {
@@ -66,8 +83,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.List
                 break;
             default:
                 GuiUtils.showToast(MainActivity.this, R.string.list_item_mode_notfound);
-                break;
+                return;
         }
+
+        mAdapter.setTypes(types);
+        mAdapter.notifyDataSetChanged();
     }
     //endregion
 
