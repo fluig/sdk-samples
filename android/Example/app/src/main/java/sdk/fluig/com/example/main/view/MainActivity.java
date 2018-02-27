@@ -10,10 +10,15 @@ import android.support.v7.widget.RecyclerView;
 import sdk.fluig.com.bll.core.eula.EulaFlow;
 import sdk.fluig.com.bll.core.login.LoginFlow;
 import sdk.fluig.com.example.R;
+import sdk.fluig.com.example.main.contract.MainContract;
+import sdk.fluig.com.example.main.presenter.MainPresenter;
 import sdk.fluig.com.example.model.ListItemType;
 import sdk.fluig.com.example.utils.GuiUtils;
 
-public class MainActivity extends AppCompatActivity implements MainAdapter.OnClickListener {
+public class MainActivity extends AppCompatActivity
+        implements MainAdapter.OnClickListener, MainContract.View {
+
+    private MainContract.Presenter mPresenter;
 
     private MainAdapter mAdapter;
 
@@ -24,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnCli
         setContentView(R.layout.activity_main);
 
         setupView();
+
+        new MainPresenter(this);
     }
     //endregion
 
@@ -46,95 +53,40 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.OnCli
     //region MainAdapter.Listener
     @Override
     public void onClickItem(ListItemType itemType) {
-        switch (itemType) {
-            //mode
-            case FLOW:
-            case COMPONENTS:
-                showListOfType(itemType);
-                break;
-
-            //flows
-            case LOGIN:
-            case EULA:
-                startFlowOfType(itemType);
-                break;
-
-            //components
-            case BUTTON:
-            case EDIT_TEXT:
-            case GROUP_TEXT:
-            case MEDIA_VIEW:
-            case PAGER:
-            case THUMB:
-            case WEB_VIEW:
-                showComponentOfType(itemType);
-                break;
-
-            default:
-                break;
-        }
+        mPresenter.obtainNextStep(itemType);
     }
     //endregion
 
-    //region Lists
-    private void showListOfType(ListItemType type) {
-        ListItemType[] types;
+    //region MainContract.View
+    @Override
+    public void setPresenter(MainContract.Presenter presenter) {
+        mPresenter = presenter;
+    }
 
-        switch (type) {
-            case FLOW:
-                types = ListItemType.allFlows();
-                break;
-            case COMPONENTS:
-                types = ListItemType.allComponents();
-                break;
-            default:
-                GuiUtils.showToast(MainActivity.this, R.string.list_item_mode_notfound);
-                return;
-        }
+    @Override
+    public void showError(int stringRes) {
+        GuiUtils.showToast(MainActivity.this, stringRes);
+    }
 
-        mAdapter.setTypes(types);
+    @Override
+    public void showList(ListItemType[] itemTypes) {
+        mAdapter.setTypes(itemTypes);
         mAdapter.notifyDataSetChanged();
     }
-    //endregion
 
-    //region Flows
-    private void startFlowOfType(ListItemType type) {
-        switch (type) {
-            case LOGIN:
-                startLoginFlow();
-                break;
-            case EULA:
-                startEulaFlow();
-                break;
-            default:
-                GuiUtils.showToast(MainActivity.this, R.string.list_item_flow_notfound);
-                break;
-        }
+    @Override
+    public void showComponent(ListItemType itemType) {
+
     }
 
-    private void startLoginFlow() {
+    @Override
+    public void showLoginFlow() {
         new LoginFlow(MainActivity.this, new Intent()).start();
     }
 
-    private void startEulaFlow() {
+    @Override
+    public void showEulaFlow() {
         new EulaFlow(MainActivity.this, "Example").start();
-    }
-    //endregion
-
-    //region Components
-    private void showComponentOfType(ListItemType type) {
-        switch (type) {
-            case BUTTON:
-            case EDIT_TEXT:
-            case GROUP_TEXT:
-            case MEDIA_VIEW:
-            case PAGER:
-            case THUMB:
-            case WEB_VIEW:
-            default:
-                GuiUtils.showToast(MainActivity.this, R.string.list_item_components_notfound);
-                break;
-        }
     }
     //endregion
 }
