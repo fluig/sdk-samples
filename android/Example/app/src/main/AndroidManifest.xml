@@ -58,6 +58,7 @@
             android:name="sdk.fluig.com.bll.core.eula.terms.view.EulaTermsActivity"
             android:theme="@style/FluigEulaTheme.Dark" />
 
+        <!-- App -->
         <activity android:name=".main.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,9 +66,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".success.view.SuccessActivity" />
-
+        <activity android:name=".component.view.ComponentActivity" />
     </application>
 
 </manifest>
