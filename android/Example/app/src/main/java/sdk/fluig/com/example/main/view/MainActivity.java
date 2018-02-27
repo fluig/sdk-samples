@@ -1,6 +1,9 @@
 package sdk.fluig.com.example.main.view;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +17,7 @@ import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.main.contract.MainContract;
 import sdk.fluig.com.example.main.presenter.MainPresenter;
 import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.success.view.SuccessActivity;
 import sdk.fluig.com.example.utils.GuiUtils;
 
 public class MainActivity extends AppCompatActivity
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity
 
     private MainAdapter mAdapter;
 
+    private EulaBroadcastReceiver mEulaBroadcastReceiver;
+
     //region Lifecycle
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +38,18 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         setupView();
+        setupEulaBroadcast();
 
         new MainPresenter(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (mEulaBroadcastReceiver != null) {
+            unregisterReceiver(mEulaBroadcastReceiver);
+        }
     }
     //endregion
 
@@ -63,6 +79,15 @@ public class MainActivity extends AppCompatActivity
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         };
+    }
+
+    private void setupEulaBroadcast() {
+        mEulaBroadcastReceiver = new EulaBroadcastReceiver();
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(EulaFlow.ACTION_DID_ACCEPT);
+        filter.addAction(EulaFlow.ACTION_DID_NOT_ACCEPT);
+        registerReceiver(mEulaBroadcastReceiver, filter);
     }
     //endregion
 
@@ -97,12 +122,30 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void showLoginFlow() {
-        new LoginFlow(MainActivity.this, new Intent()).start();
+        new LoginFlow(MainActivity.this, SuccessActivity.class).start();
     }
 
     @Override
     public void showEulaFlow() {
-        new EulaFlow(MainActivity.this, "Example").start();
+        new EulaFlow(MainActivity.this).start();
     }
     //endregion
+
+    private class EulaBroadcastReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action != null) {
+                if (action.equals(EulaFlow.ACTION_DID_ACCEPT)) {
+                    Intent nextIntent = new Intent(MainActivity.this, SuccessActivity.class);
+                    nextIntent.putExtra(SuccessActivity.ARG_FLOW_SOURCE, "EULA");
+                    startActivity(nextIntent);
+
+                } else if (action.equals(EulaFlow.ACTION_DID_NOT_ACCEPT)) {
+                    GuiUtils.showToast(MainActivity.this, R.string.eula_not_accepted);
+                }
+            }
+        }
+    }
 }
