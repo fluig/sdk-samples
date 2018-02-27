@@ -53,10 +53,10 @@
         <activity
             android:name="sdk.fluig.com.bll.core.eula.accept.view.EulaAcceptActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/FluigEulaTheme.Light" />
+            android:theme="@style/FluigEulaTheme.Dark" />
         <activity
             android:name="sdk.fluig.com.bll.core.eula.terms.view.EulaTermsActivity"
-            android:theme="@style/FluigEulaTheme.Light" />
+            android:theme="@style/FluigEulaTheme.Dark" />
 
         <activity android:name=".main.view.MainActivity">
             <intent-filter>
