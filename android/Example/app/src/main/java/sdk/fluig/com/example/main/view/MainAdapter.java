@@ -52,9 +52,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        Context context = mContext.get();
+        if (context == null) {
+            return;
+        }
+
         final ListItemType type = mTypes[position];
 
-        holder.textView.setText(type.toString());
+        holder.textView.setText(type.getString(context));
         if (mListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

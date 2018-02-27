@@ -1,10 +1,14 @@
 package sdk.fluig.com.example.model;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.StringRes;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import sdk.fluig.com.example.R;
 
 /**
  * Created by gregorysholl on 26/02/18.
@@ -12,33 +16,34 @@ import java.util.List;
 
 public enum ListItemType implements Parcelable {
     //mode
-    FLOW("Fluxos", 0),
-    COMPONENTS("Componentes", 0),
+    FLOW        (R.string.list_item_mode_flows, 0),
+    COMPONENTS  (R.string.list_item_mode_components, 0),
 
     //flow
-    LOGIN("Login", 1),
-    EULA("Termos de Uso", 1),
+    LOGIN       (R.string.list_item_flow_login, 1),
+    EULA        (R.string.list_item_flow_eula, 1),
 
     //components
-    BUTTON("FluigSdkButton", 2),
-    EDIT_TEXT("FluigSdkEditText", 2),
-    GROUP_TEXT("FluigSdkGroupText", 2),
-    MEDIA_VIEW("FluigSdkMediaView", 2),
-    PAGER("FluigSdkPager", 2),
-    THUMB("FluigSdkProfileThumb", 2),
-    WEB_VIEW("FluigSdkWebView", 2);
+    BUTTON      (R.string.list_item_components_button, 2),
+    EDIT_TEXT   (R.string.list_item_components_edittext, 2),
+    GROUP_TEXT  (R.string.list_item_components_grouptext, 2),
+    MEDIA_VIEW  (R.string.list_item_components_mediaview, 2),
+    PAGER       (R.string.list_item_components_pager, 2),
+    THUMB       (R.string.list_item_components_profilethumb, 2),
+    WEB_VIEW    (R.string.list_item_components_webview, 2);
 
-    private final String mName;
+    @StringRes
+    private final int mStringRes;
 
     private final int mType;
 
-    ListItemType(String name, int type) {
-        mName = name;
+    ListItemType(int stringRes, int type) {
+        mStringRes = stringRes;
         mType = type;
     }
 
-    public String toString() {
-        return mName;
+    public String getString(Context context) {
+        return context.getString(mStringRes);
     }
 
     //region Helpers
@@ -71,7 +76,7 @@ public enum ListItemType implements Parcelable {
     //region Parcelable
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mName);
+        dest.writeInt(mStringRes);
     }
 
     @Override
