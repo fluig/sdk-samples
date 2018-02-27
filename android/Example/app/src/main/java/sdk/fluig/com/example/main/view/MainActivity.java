@@ -1,6 +1,7 @@
 package sdk.fluig.com.example.main.view;
 
 import android.content.Intent;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -17,6 +18,8 @@ import sdk.fluig.com.example.utils.GuiUtils;
 
 public class MainActivity extends AppCompatActivity
         implements MainAdapter.OnClickListener, MainContract.View {
+
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     private MainContract.Presenter mPresenter;
 
@@ -47,6 +50,19 @@ public class MainActivity extends AppCompatActivity
                 layoutManager.getOrientation()
         ));
         recyclerView.setAdapter(mAdapter);
+
+        mSwipeRefreshLayout = findViewById(R.id.mainActivity_swipeContainer);
+        mSwipeRefreshLayout.setOnRefreshListener(getOnRefreshListener());
+    }
+
+    private SwipeRefreshLayout.OnRefreshListener getOnRefreshListener() {
+        return new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                showList(ListItemType.allModes());
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        };
     }
     //endregion
 
@@ -76,7 +92,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void showComponent(ListItemType itemType) {
-
+        //TODO: Implement component activity
     }
 
     @Override
