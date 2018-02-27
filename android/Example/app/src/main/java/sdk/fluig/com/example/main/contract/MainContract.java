@@ -1,7 +1,6 @@
 package sdk.fluig.com.example.main.contract;
 
-import android.support.annotation.StringRes;
-
+import sdk.fluig.com.example.base.contract.BaseView;
 import sdk.fluig.com.example.model.ListItemType;
 
 /**
@@ -10,11 +9,7 @@ import sdk.fluig.com.example.model.ListItemType;
 
 public interface MainContract {
 
-    interface View {
-
-        void setPresenter(Presenter presenter);
-
-        void showError(@StringRes int stringRes);
+    interface View extends BaseView<Presenter> {
 
         void showList(ListItemType[] itemTypes);
 
