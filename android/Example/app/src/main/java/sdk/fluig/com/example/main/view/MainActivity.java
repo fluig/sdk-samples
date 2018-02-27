@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Parcelable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import sdk.fluig.com.bll.core.eula.EulaFlow;
 import sdk.fluig.com.bll.core.login.LoginFlow;
 import sdk.fluig.com.example.R;
+import sdk.fluig.com.example.component.view.ComponentActivity;
 import sdk.fluig.com.example.main.contract.MainContract;
 import sdk.fluig.com.example.main.presenter.MainPresenter;
 import sdk.fluig.com.example.model.ListItemType;
@@ -117,7 +119,9 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void showComponent(ListItemType itemType) {
-        //TODO: Implement component activity
+        Intent intent = new Intent(MainActivity.this, ComponentActivity.class);
+        intent.putExtra(ComponentActivity.ARG_ITEM_TYPE, (Parcelable) itemType);
+        startActivity(intent);
     }
 
     @Override
