@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Example</string>
 
-    <!--List-->
+    <!-- List -->
     <string name="list_item_mode_flows">Fluxos</string>
     <string name="list_item_mode_components">Componentes</string>
     <string name="list_item_mode_notfound">O modo escolhido não está implementado.</string>
@@ -19,8 +19,11 @@
     <string name="list_item_components_webview">FluigSdkWebView</string>
     <string name="list_item_components_notfound">O componente escolhido não está implementado.</string>
 
-    <!--Success-->
+    <!-- Success -->
     <string name="success">Sucesso!</string>
     <string name="success_flow_source">Você completou o fluxo #flow.</string>
+
+    <!-- EULA -->
+    <string name="eula_not_accepted">Termos de Uso não aceito.</string>
 
 </resources>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Example</string>
 
-    <!--List-->
+    <!-- List -->
     <string name="list_item_mode_flows">Flows</string>
     <string name="list_item_mode_components">Components</string>
     <string name="list_item_mode_notfound">The chosen mode is not implemented.</string>
@@ -11,8 +11,11 @@
 
     <string name="list_item_components_notfound">The chosen component is not implemented.</string>
 
-    <!--Success-->
+    <!-- Success -->
     <string name="success">Success</string>
     <string name="success_flow_source">You completed the flow #flow.</string>
+
+    <!-- EULA -->
+    <string name="eula_not_accepted">EULA not accepted.</string>
 
 </resources>
