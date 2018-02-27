@@ -24,7 +24,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     private OnClickListener mListener;
 
-    /*package*/ MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
+    public MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
         mContext = new WeakReference<>(context);
         mTypes = types;
         mListener = listener;
