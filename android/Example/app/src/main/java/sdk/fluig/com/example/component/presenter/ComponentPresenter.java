@@ -1,6 +1,9 @@
 package sdk.fluig.com.example.component.presenter;
 
+import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.component.contract.ComponentContract;
+import sdk.fluig.com.example.component.view.fragment.ButtonFragment;
+import sdk.fluig.com.example.component.view.fragment.EditTextFragment;
 import sdk.fluig.com.example.model.ListItemType;
 
 /**
@@ -21,7 +24,24 @@ public class ComponentPresenter implements ComponentContract.Presenter {
     //region ComponentContract.Presenter
     @Override
     public void obtainCorrectFragment(ListItemType itemType) {
+        switch (itemType) {
+            case BUTTON:
+                mView.showFragment(new ButtonFragment(), ButtonFragment.TAG);
+                break;
+            case EDIT_TEXT:
+                mView.showFragment(new EditTextFragment(), EditTextFragment.TAG);
+                break;
+            case GROUP_TEXT:
+            case MEDIA_VIEW:
+            case PAGER:
+            case THUMB:
+            case WEB_VIEW:
+                break;
 
+            default:
+                mView.showError(R.string.list_item_components_notfound);
+                break;
+        }
     }
     //endregion
 }
