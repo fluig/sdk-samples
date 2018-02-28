@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import sdk.fluig.com.example.R;
@@ -24,7 +25,7 @@ public class EditTextFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_edit_text, container, false);
+        View view = inflater.inflate(R.layout.fragment_component, container, false);
 
         setupView(view);
 
@@ -41,12 +42,18 @@ public class EditTextFragment extends Fragment {
     }
 
     private void setupComponent(View view) {
-        FluigSdkEditText editText = view.findViewById(R.id.editTextFragment_component);
-
+        FluigSdkEditText editText = new FluigSdkEditText(getContext());
+        editText.setLayoutParams(new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        ));
         editText.setHint("Hint");
         editText.setHintTextColor(Color.BLUE);
         editText.setIcon(R.drawable.ic_account);
         editText.showValidState();
+
+        LinearLayout linearLayout = view.findViewById(R.id.componentFragment_container);
+        linearLayout.addView(editText);
     }
 
     private void setupTextView(View view) {
@@ -63,7 +70,7 @@ public class EditTextFragment extends Fragment {
                 "    android:textColorHint=\"@color/blue\"\n" +
                 "    app:icon=\"@drawable/ic_account\" />\n";
 
-        TextView textView = view.findViewById(R.id.editTextFragment_textView);
+        TextView textView = view.findViewById(R.id.componentFragment_textView);
         textView.setText(text);
     }
 }
