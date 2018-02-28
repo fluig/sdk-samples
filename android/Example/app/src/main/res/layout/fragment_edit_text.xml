@@ -4,11 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:orientation="vertical"
     tools:context="sdk.fluig.com.example.component.view.fragment.EditTextFragment">
 
     <sdk.fluig.com.ui.components.edittext.FluigSdkEditText
+        android:id="@+id/editTextFragment_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hint"/>
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/editTextFragment_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="monospace" />
+
+    </ScrollView>
 
 </LinearLayout>
