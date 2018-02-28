@@ -60,7 +60,7 @@ public class EditTextFragment extends Fragment {
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"wrap_content\"\n" +
                 "    android:hint=\"Hint\"\n" +
-                "    android:textColorHint=\"@color/blue\"" +
+                "    android:textColorHint=\"@color/blue\"\n" +
                 "    app:icon=\"@drawable/ic_account\" />\n";
 
         TextView textView = view.findViewById(R.id.editTextFragment_textView);
