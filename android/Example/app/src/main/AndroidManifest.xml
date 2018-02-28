@@ -59,14 +59,19 @@
             android:theme="@style/FluigEulaTheme.Dark" />
 
         <!-- App -->
-        <activity android:name=".main.view.MainActivity">
+        <activity
+            android:name=".main.view.MainActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".success.view.SuccessActivity" />
+        <activity
+            android:name=".success.view.SuccessActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".component.view.ComponentActivity" />
     </application>
 
