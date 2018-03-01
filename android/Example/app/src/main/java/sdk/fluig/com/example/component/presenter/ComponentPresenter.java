@@ -5,6 +5,7 @@ import sdk.fluig.com.example.component.contract.ComponentContract;
 import sdk.fluig.com.example.component.view.fragment.ButtonFragment;
 import sdk.fluig.com.example.component.view.fragment.EditTextFragment;
 import sdk.fluig.com.example.component.view.fragment.GroupTextFragment;
+import sdk.fluig.com.example.component.view.fragment.MediaViewFragment;
 import sdk.fluig.com.example.model.ListItemType;
 
 /**
@@ -36,6 +37,8 @@ public class ComponentPresenter implements ComponentContract.Presenter {
                 mView.showFragment(new GroupTextFragment(), GroupTextFragment.TAG);
                 break;
             case MEDIA_VIEW:
+                mView.showFragment(new MediaViewFragment(), MediaViewFragment.TAG);
+                break;
             case PAGER:
             case THUMB:
             case WEB_VIEW:
