@@ -28,7 +28,6 @@ public enum ListItemType implements Parcelable {
     EDIT_TEXT   (R.string.list_item_components_edittext, 2),
     GROUP_TEXT  (R.string.list_item_components_grouptext, 2),
     MEDIA_VIEW  (R.string.list_item_components_mediaview, 2),
-    THUMB       (R.string.list_item_components_profilethumb, 2),
     WEB_VIEW    (R.string.list_item_components_webview, 2);
 
     @StringRes
