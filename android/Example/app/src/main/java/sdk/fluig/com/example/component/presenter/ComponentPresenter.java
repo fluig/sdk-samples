@@ -39,7 +39,6 @@ public class ComponentPresenter implements ComponentContract.Presenter {
             case MEDIA_VIEW:
                 mView.showFragment(new MediaViewFragment(), MediaViewFragment.TAG);
                 break;
-            case PAGER:
             case THUMB:
             case WEB_VIEW:
                 break;
