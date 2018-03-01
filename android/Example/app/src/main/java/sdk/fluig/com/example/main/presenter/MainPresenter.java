@@ -37,7 +37,6 @@ public class MainPresenter implements MainContract.Presenter {
             case EDIT_TEXT:
             case GROUP_TEXT:
             case MEDIA_VIEW:
-            case THUMB:
             case WEB_VIEW:
                 mView.showComponent(itemType);
                 break;
