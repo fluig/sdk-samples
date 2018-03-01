@@ -17,7 +17,11 @@ public class GuiUtils {
     private GuiUtils() {}
 
     public static void showToast(Context context, @StringRes int stringRes) {
-        Toast.makeText(context, context.getString(stringRes), Toast.LENGTH_SHORT).show();
+        showToast(context, stringRes, Toast.LENGTH_SHORT);
+    }
+
+    public static void showToast(Context context, @StringRes int stringRes, int length) {
+        Toast.makeText(context, context.getString(stringRes), length).show();
     }
 
     public static void addFragment(AppCompatActivity activity,

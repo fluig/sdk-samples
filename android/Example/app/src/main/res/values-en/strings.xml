@@ -18,4 +18,7 @@
     <!-- EULA -->
     <string name="eula_not_accepted">EULA not accepted.</string>
 
+    <!-- Web View -->
+    <string name="web_view_no_additional_config">The use of FluigSdkWebView is identical to a standard WebView.</string>
+
 </resources>

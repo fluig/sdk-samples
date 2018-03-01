@@ -6,6 +6,7 @@ import sdk.fluig.com.example.component.view.fragment.ButtonFragment;
 import sdk.fluig.com.example.component.view.fragment.EditTextFragment;
 import sdk.fluig.com.example.component.view.fragment.GroupTextFragment;
 import sdk.fluig.com.example.component.view.fragment.MediaViewFragment;
+import sdk.fluig.com.example.component.view.fragment.WebViewFragment;
 import sdk.fluig.com.example.model.ListItemType;
 
 /**
@@ -40,6 +41,7 @@ public class ComponentPresenter implements ComponentContract.Presenter {
                 mView.showFragment(new MediaViewFragment(), MediaViewFragment.TAG);
                 break;
             case WEB_VIEW:
+                mView.showFragment(new WebViewFragment(), WebViewFragment.TAG);
                 break;
 
             default:
