@@ -19,8 +19,11 @@ public class EditTextFragment extends Fragment {
 
     public static final String TAG = EditTextFragment.class.getSimpleName();
 
+    //region Constructors
     public EditTextFragment() {}
+    //endregion
 
+    //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,7 +34,9 @@ public class EditTextFragment extends Fragment {
 
         return view;
     }
+    //endregion
 
+    //region Setups
     private void setupView(View view) {
         if (view == null) {
             return;
@@ -73,4 +78,5 @@ public class EditTextFragment extends Fragment {
         TextView textView = view.findViewById(R.id.componentFragment_textView);
         textView.setText(text);
     }
+    //endregion
 }

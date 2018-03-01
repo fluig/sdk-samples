@@ -19,8 +19,11 @@ public class ButtonFragment extends Fragment {
 
     public static final String TAG = ButtonFragment.class.getSimpleName();
 
+    //region Constructors
     public ButtonFragment() {}
+    //endregion
 
+    //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,7 +34,9 @@ public class ButtonFragment extends Fragment {
 
         return view;
     }
+    //endregion
 
+    //region Setups
     private void setupView(View view) {
         if (view == null) {
             return;
@@ -73,4 +78,5 @@ public class ButtonFragment extends Fragment {
         TextView textView = view.findViewById(R.id.componentFragment_textView);
         textView.setText(text);
     }
+    //endregion
 }
