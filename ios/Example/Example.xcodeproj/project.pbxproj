@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AECD20498DDE00A5A2F4 /* L10n.swift */; };
 		0C3984762048A42F0016AE85 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3984752048A42F0016AE85 /* ItemType.swift */; };
 		0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6AB204600AA00C088DE /* AppDelegate.swift */; };
 		0C69B6AE204600AA00C088DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6AD204600AA00C088DE /* ViewController.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C12AEC620497EF600A5A2F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C12AECD20498DDE00A5A2F4 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		0C3984752048A42F0016AE85 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		0C69B6A8204600AA00C088DE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69B6AB204600AA00C088DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		0C69B6CB2046040000C088DE /* fluigSDK.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fluigSDK.plist; sourceTree = "<group>"; };
 		0C92DE7520497D36000C8E45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CB6727E20497CCD00010F39 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-        0C12AEC620497EF600A5A2F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		106DCE4847FD2EC97F39ABA4 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E484B18423E1B1ECDAA9564 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4D789A1498FDD5509DF58481 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C12AEC7204988DE00A5A2F4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C12AECD20498DDE00A5A2F4 /* L10n.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0C3984742048A40A0016AE85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0C3984742048A40A0016AE85 /* Models */,
+				0C12AEC7204988DE00A5A2F4 /* Utils */,
 				0CB6727C20497CAB00010F39 /* Resources */,
 				0C69B6AB204600AA00C088DE /* AppDelegate.swift */,
 				0C69B6AD204600AA00C088DE /* ViewController.swift */,
@@ -168,6 +179,7 @@
 				0C69B6A6204600AA00C088DE /* Resources */,
 				28B50722446BA0D501484C96 /* [CP] Embed Pods Frameworks */,
 				97D136A31CC3457420DA3390 /* [CP] Copy Pods Resources */,
+				0C12AECC20498A7C00A5A2F4 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -264,6 +276,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C12AECC20498A7C00A5A2F4 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t flat-swift4 \"$PROJECT_DIR\"/Example/Resources/en.lproj/Localizable.strings -o \"$PROJECT_DIR\"/Example/Utils/L10n.swift";
+		};
 		28B50722446BA0D501484C96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */,
 				0C69B6AE204600AA00C088DE /* ViewController.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,
@@ -420,7 +447,7 @@
 		0CB6727D20497CCD00010F39 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-                0C92DE7520497D36000C8E45 /* en */,
+				0C92DE7520497D36000C8E45 /* en */,
 				0CB6727E20497CCD00010F39 /* pt-BR */,
 				0C12AEC620497EF600A5A2F4 /* es */,
 			);

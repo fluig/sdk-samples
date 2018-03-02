@@ -5,3 +5,14 @@
   Created by Gregory Sholl e Santos on 02/03/18.
   Copyright © 2018 fluig SDK. All rights reserved.
 */
+
+"list_flows" = "Flows";
+"list_components" = "Components";
+
+"flow_login" = "Login";
+"flow_eula" = "EULA";
+
+"component_button" = "FluigSDKButton";
+"component_textField" = "FluigSDKTextField";
+"component_textFieldGroup" = "FluigSDKTextFieldGroup";
+"component_mediaView" = "FluigSDKMediaView";

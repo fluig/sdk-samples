@@ -8,9 +8,11 @@ PODS:
     - fluigsdk/core
     - fluigsdk/ui
   - fluigsdk/ui (0.2.1)
+  - SwiftGen (5.2.1)
 
 DEPENDENCIES:
   - fluigsdk (from `https://github.com/fluig/fluigsdkios`, tag `0.2.1`)
+  - SwiftGen
 
 EXTERNAL SOURCES:
   fluigsdk:
@@ -24,7 +26,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   fluigsdk: 26120089681a8fe99bbbcc61f7137487b6d35360
+  SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
 
-PODFILE CHECKSUM: d411c21726d332baadfbc569d3799cfe5a8d6304
+PODFILE CHECKSUM: e1cab91e6aec547fe56efc2d781586c24caa6ee2
 
 COCOAPODS: 1.4.0
