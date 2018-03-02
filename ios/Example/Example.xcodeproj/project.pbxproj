@@ -15,6 +15,7 @@
 		0C69B6B6204600AA00C088DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6B4204600AA00C088DE /* LaunchScreen.storyboard */; };
 		0C69B6C1204600AA00C088DE /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6C0204600AA00C088DE /* ExampleTests.swift */; };
 		0C69B6CC2046040000C088DE /* fluigSDK.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6CB2046040000C088DE /* fluigSDK.plist */; };
+		0CB6727F20497CCD00010F39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6727D20497CCD00010F39 /* Localizable.strings */; };
 		3D6F47C9133206CE5F95EFF3 /* Pods_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C745FF0AAF40BEEFE68AF9 /* Pods_ExampleTests.framework */; };
 		EF36104BC0BB913B6B35BE58 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B270C1DC0241EA265E5D8CB /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,9 @@
 		0C69B6C0204600AA00C088DE /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		0C69B6C2204600AA00C088DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C69B6CB2046040000C088DE /* fluigSDK.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fluigSDK.plist; sourceTree = "<group>"; };
+		0C92DE7520497D36000C8E45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CB6727E20497CCD00010F39 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+        0C12AEC620497EF600A5A2F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		106DCE4847FD2EC97F39ABA4 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E484B18423E1B1ECDAA9564 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4D789A1498FDD5509DF58481 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0C3984742048A40A0016AE85 /* Models */,
+				0CB6727C20497CAB00010F39 /* Resources */,
 				0C69B6AB204600AA00C088DE /* AppDelegate.swift */,
 				0C69B6AD204600AA00C088DE /* ViewController.swift */,
 				0C69B6AF204600AA00C088DE /* Main.storyboard */,
@@ -120,6 +125,14 @@
 				0C69B6C2204600AA00C088DE /* Info.plist */,
 			);
 			path = ExampleTests;
+			sourceTree = "<group>";
+		};
+		0CB6727C20497CAB00010F39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CB6727D20497CCD00010F39 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7902D84AAF87844C3FB5E172 /* Frameworks */ = {
@@ -214,6 +227,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				es,
 			);
 			mainGroup = 0C69B69F204600AA00C088DE;
 			productRefGroup = 0C69B6A9204600AA00C088DE /* Products */;
@@ -231,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB6727F20497CCD00010F39 /* Localizable.strings in Resources */,
 				0C69B6B6204600AA00C088DE /* LaunchScreen.storyboard in Resources */,
 				0C69B6CC2046040000C088DE /* fluigSDK.plist in Resources */,
 				0C69B6B3204600AA00C088DE /* Assets.xcassets in Resources */,
@@ -399,6 +415,16 @@
 				0C69B6B5204600AA00C088DE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0CB6727D20497CCD00010F39 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+                0C92DE7520497D36000C8E45 /* en */,
+				0CB6727E20497CCD00010F39 /* pt-BR */,
+				0C12AEC620497EF600A5A2F4 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
