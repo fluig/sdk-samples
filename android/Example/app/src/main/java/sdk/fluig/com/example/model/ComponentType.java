@@ -13,11 +13,11 @@ import sdk.fluig.com.example.R;
 
 public enum ComponentType implements ItemType, Parcelable {
 
-    BUTTON      (R.string.list_item_components_button),
-    EDIT_TEXT   (R.string.list_item_components_edittext),
-    GROUP_TEXT  (R.string.list_item_components_grouptext),
-    MEDIA_VIEW  (R.string.list_item_components_mediaview),
-    WEB_VIEW    (R.string.list_item_components_webview);
+    BUTTON      (R.string.components_button),
+    EDIT_TEXT   (R.string.components_edittext),
+    GROUP_TEXT  (R.string.components_grouptext),
+    MEDIA_VIEW  (R.string.components_mediaview),
+    WEB_VIEW    (R.string.components_webview);
 
     @StringRes
     private final int mStringRes;
