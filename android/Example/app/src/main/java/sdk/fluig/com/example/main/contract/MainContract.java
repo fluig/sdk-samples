@@ -1,7 +1,8 @@
 package sdk.fluig.com.example.main.contract;
 
 import sdk.fluig.com.example.base.contract.BaseView;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
+import sdk.fluig.com.example.model.ItemType;
 
 /**
  * Created by gregorysholl on 26/02/18.
@@ -11,9 +12,9 @@ public interface MainContract {
 
     interface View extends BaseView<Presenter> {
 
-        void showList(ListItemType[] itemTypes);
+        void showList(ItemType[] itemTypes);
 
-        void showComponent(ListItemType itemType);
+        void showComponent(ComponentType componentType);
 
         void showLoginFlow();
 
@@ -22,6 +23,6 @@ public interface MainContract {
 
     interface Presenter {
 
-        void obtainNextStep(ListItemType itemType);
+        void obtainNextStep(ItemType itemType);
     }
 }

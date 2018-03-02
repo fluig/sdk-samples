@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.lang.ref.WeakReference;
 
 import sdk.fluig.com.example.R;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ItemType;
 
 /**
  * Created by gregorysholl on 26/02/18.
@@ -20,17 +20,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     private WeakReference<Context> mContext;
 
-    private ListItemType[] mTypes;
+    private ItemType[] mTypes;
 
     private OnClickListener mListener;
 
-    public MainAdapter(Context context, ListItemType[] types, OnClickListener listener) {
+    public MainAdapter(Context context, ItemType[] types, OnClickListener listener) {
         mContext = new WeakReference<>(context);
         mTypes = types;
         mListener = listener;
     }
 
-    /*package*/ void setTypes(ListItemType[] types) {
+    /*package*/ void setTypes(ItemType[] types) {
         mTypes = types;
     }
 
@@ -57,7 +57,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             return;
         }
 
-        final ListItemType type = mTypes[position];
+        final ItemType type = mTypes[position];
 
         holder.textView.setText(type.getString(context));
         if (mListener != null) {
@@ -82,6 +82,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     public interface OnClickListener {
-        void onClickItem(ListItemType itemType);
+        void onClickItem(ItemType itemType);
     }
 }

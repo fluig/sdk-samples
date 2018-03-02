@@ -2,7 +2,10 @@ package sdk.fluig.com.example.main.presenter;
 
 import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.main.contract.MainContract;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
+import sdk.fluig.com.example.model.FlowType;
+import sdk.fluig.com.example.model.ItemType;
+import sdk.fluig.com.example.model.ListType;
 
 /**
  * Created by gregorysholl on 26/02/18.
@@ -18,58 +21,39 @@ public class MainPresenter implements MainContract.Presenter {
     }
 
     @Override
-    public void obtainNextStep(final ListItemType itemType) {
-        switch (itemType) {
-            //mode
+    public void obtainNextStep(ItemType itemType) {
+        if (itemType instanceof ListType) {
+            showList((ListType) itemType);
+
+        } else if (itemType instanceof FlowType) {
+            showFlow((FlowType) itemType);
+
+        } else if (itemType instanceof ComponentType) {
+            mView.showComponent((ComponentType) itemType);
+
+        } else {
+            mView.showError(R.string.list_item_mode_notfound);
+        }
+    }
+
+    private void showList(ListType listType) {
+        switch (listType) {
             case FLOW:
+                mView.showList(FlowType.values());
+                break;
             case COMPONENTS:
-                showList(itemType);
-                break;
-
-            //flows
-            case LOGIN:
-            case EULA:
-                showFlow(itemType);
-                break;
-
-            //components
-            case BUTTON:
-            case EDIT_TEXT:
-            case GROUP_TEXT:
-            case MEDIA_VIEW:
-            case WEB_VIEW:
-                mView.showComponent(itemType);
-                break;
-
-            default:
+                mView.showList(ComponentType.values());
                 break;
         }
     }
 
-    private void showList(ListItemType itemType) {
-        switch (itemType) {
-            case FLOW:
-                mView.showList(ListItemType.allFlows());
-                break;
-            case COMPONENTS:
-                mView.showList(ListItemType.allComponents());
-                break;
-            default:
-                mView.showError(R.string.list_item_mode_notfound);
-                break;
-        }
-    }
-
-    private void showFlow(ListItemType itemType) {
-        switch (itemType) {
+    private void showFlow(FlowType flowType) {
+        switch (flowType) {
             case LOGIN:
                 mView.showLoginFlow();
                 break;
             case EULA:
                 mView.showEulaFlow();
-                break;
-            default:
-                mView.showError(R.string.list_item_flow_notfound);
                 break;
         }
     }

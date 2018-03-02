@@ -18,7 +18,9 @@ import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.component.view.ComponentActivity;
 import sdk.fluig.com.example.main.contract.MainContract;
 import sdk.fluig.com.example.main.presenter.MainPresenter;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
+import sdk.fluig.com.example.model.ItemType;
+import sdk.fluig.com.example.model.ListType;
 import sdk.fluig.com.example.success.view.SuccessActivity;
 import sdk.fluig.com.example.utils.GuiUtils;
 
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity
 
     //region Setups
     private void setupView() {
-        mAdapter = new MainAdapter(MainActivity.this, ListItemType.allModes(), this);
+        mAdapter = new MainAdapter(MainActivity.this, ListType.values(), this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
 
         RecyclerView recyclerView = findViewById(R.id.mainActivity_recyclerView);
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity
         return new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                showList(ListItemType.allModes());
+                showList(ListType.values());
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         };
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity
 
     //region MainAdapter.Listener
     @Override
-    public void onClickItem(ListItemType itemType) {
+    public void onClickItem(ItemType itemType) {
         mPresenter.obtainNextStep(itemType);
     }
     //endregion
@@ -112,15 +114,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void showList(ListItemType[] itemTypes) {
+    public void showList(ItemType[] itemTypes) {
         mAdapter.setTypes(itemTypes);
         mAdapter.notifyDataSetChanged();
     }
 
     @Override
-    public void showComponent(ListItemType itemType) {
+    public void showComponent(ComponentType componentType) {
         Intent intent = new Intent(MainActivity.this, ComponentActivity.class);
-        intent.putExtra(ComponentActivity.ARG_ITEM_TYPE, (Parcelable) itemType);
+        intent.putExtra(ComponentActivity.ARG_ITEM_TYPE, (Parcelable) componentType);
         startActivity(intent);
     }
 
