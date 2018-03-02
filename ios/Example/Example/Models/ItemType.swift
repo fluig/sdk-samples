@@ -11,8 +11,8 @@ import Foundation
 protocol ItemType {}
 
 enum ListType: String, ItemType {
-    case flow = "mode_flow"
-    case components = "mode_components"
+    case flow = "list_flow"
+    case components = "list_components"
 }
 
 enum FlowType: String, ItemType {
