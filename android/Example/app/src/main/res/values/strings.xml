@@ -2,9 +2,9 @@
     <string name="app_name">Example</string>
 
     <!-- List -->
-    <string name="list_item_mode_flows">Fluxos</string>
-    <string name="list_item_mode_components">Componentes</string>
-    <string name="list_item_mode_notfound">O modo escolhido não está implementado.</string>
+    <string name="list_flows">Fluxos</string>
+    <string name="list_components">Componentes</string>
+    <string name="list_notfound">O modo escolhido não está implementado.</string>
 
     <string name="list_item_flow_login">Login</string>
     <string name="list_item_flow_eula">Termos de Uso</string>

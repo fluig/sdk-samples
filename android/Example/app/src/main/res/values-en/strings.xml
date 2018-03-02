@@ -2,9 +2,9 @@
     <string name="app_name">Example</string>
 
     <!-- List -->
-    <string name="list_item_mode_flows">Flows</string>
-    <string name="list_item_mode_components">Components</string>
-    <string name="list_item_mode_notfound">The chosen mode is not implemented.</string>
+    <string name="list_flows">Flows</string>
+    <string name="list_components">Components</string>
+    <string name="list_notfound">The chosen mode is not implemented.</string>
 
     <string name="list_item_flow_eula">EULA</string>
 

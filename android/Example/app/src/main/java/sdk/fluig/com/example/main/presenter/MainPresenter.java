@@ -32,7 +32,7 @@ public class MainPresenter implements MainContract.Presenter {
             mView.showComponent((ComponentType) itemType);
 
         } else {
-            mView.showError(R.string.list_item_mode_notfound);
+            mView.showError(R.string.list_notfound);
         }
     }
 

@@ -11,8 +11,8 @@ import sdk.fluig.com.example.R;
 
 public enum ListType implements ItemType {
 
-    FLOW        (R.string.list_item_mode_flows),
-    COMPONENTS  (R.string.list_item_mode_components);
+    FLOW        (R.string.list_flows),
+    COMPONENTS  (R.string.list_components);
 
     @StringRes
     private final int mStringRes;
