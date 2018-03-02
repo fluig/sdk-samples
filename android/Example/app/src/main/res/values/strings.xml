@@ -8,16 +8,12 @@
 
     <string name="list_item_flow_login">Login</string>
     <string name="list_item_flow_eula">Termos de Uso</string>
-    <string name="list_item_flow_notfound">O fluxo escolhido não está implementado.</string>
 
     <string name="list_item_components_button">FluigSdkButton</string>
     <string name="list_item_components_edittext">FluigSdkEditText</string>
     <string name="list_item_components_grouptext">FluigSdkGroupText</string>
     <string name="list_item_components_mediaview">FluigSdkMediaView</string>
-    <string name="list_item_components_pager">FluigSdkPager</string>
-    <string name="list_item_components_profilethumb">FluigSdkProfileThumb</string>
     <string name="list_item_components_webview">FluigSdkWebView</string>
-    <string name="list_item_components_notfound">O componente escolhido não está implementado.</string>
 
     <!-- Success -->
     <string name="success">Sucesso!</string>
