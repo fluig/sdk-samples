@@ -3,7 +3,7 @@ package sdk.fluig.com.example.component.contract;
 import android.support.v4.app.Fragment;
 
 import sdk.fluig.com.example.base.contract.BaseView;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
 
 /**
  * Created by gregorysholl on 27/02/18.
@@ -18,6 +18,6 @@ public interface ComponentContract {
 
     interface Presenter {
 
-        void obtainCorrectFragment(ListItemType itemType);
+        void obtainCorrectFragment(ComponentType componentType);
     }
 }

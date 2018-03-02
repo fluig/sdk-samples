@@ -7,7 +7,7 @@ import android.os.Bundle;
 import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.component.contract.ComponentContract;
 import sdk.fluig.com.example.component.presenter.ComponentPresenter;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
 import sdk.fluig.com.example.utils.GuiUtils;
 
 public class ComponentActivity extends AppCompatActivity
@@ -30,7 +30,7 @@ public class ComponentActivity extends AppCompatActivity
         }
 
         mPresenter = new ComponentPresenter(this);
-        mPresenter.obtainCorrectFragment((ListItemType) extras.get(ARG_ITEM_TYPE));
+        mPresenter.obtainCorrectFragment((ComponentType) extras.get(ARG_ITEM_TYPE));
     }
     //endregion
 

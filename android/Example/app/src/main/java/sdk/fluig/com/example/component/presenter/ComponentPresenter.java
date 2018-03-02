@@ -1,13 +1,12 @@
 package sdk.fluig.com.example.component.presenter;
 
-import sdk.fluig.com.example.R;
 import sdk.fluig.com.example.component.contract.ComponentContract;
 import sdk.fluig.com.example.component.view.fragment.ButtonFragment;
 import sdk.fluig.com.example.component.view.fragment.EditTextFragment;
 import sdk.fluig.com.example.component.view.fragment.GroupTextFragment;
 import sdk.fluig.com.example.component.view.fragment.MediaViewFragment;
 import sdk.fluig.com.example.component.view.fragment.WebViewFragment;
-import sdk.fluig.com.example.model.ListItemType;
+import sdk.fluig.com.example.model.ComponentType;
 
 /**
  * Created by gregorysholl on 27/02/18.
@@ -26,8 +25,8 @@ public class ComponentPresenter implements ComponentContract.Presenter {
 
     //region ComponentContract.Presenter
     @Override
-    public void obtainCorrectFragment(ListItemType itemType) {
-        switch (itemType) {
+    public void obtainCorrectFragment(ComponentType componentType) {
+        switch (componentType) {
             case BUTTON:
                 mView.showFragment(new ButtonFragment(), ButtonFragment.TAG);
                 break;
@@ -42,10 +41,6 @@ public class ComponentPresenter implements ComponentContract.Presenter {
                 break;
             case WEB_VIEW:
                 mView.showFragment(new WebViewFragment(), WebViewFragment.TAG);
-                break;
-
-            default:
-                mView.showError(R.string.list_item_components_notfound);
                 break;
         }
     }
