@@ -6,7 +6,8 @@
     <string name="list_components">Components</string>
     <string name="list_notfound">The chosen mode is not implemented.</string>
 
-    <string name="list_item_flow_eula">EULA</string>
+    <!-- Flows -->
+    <string name="flow_eula">EULA</string>
 
     <!-- Success -->
     <string name="success">Success</string>

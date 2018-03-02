@@ -11,8 +11,8 @@ import sdk.fluig.com.example.R;
 
 public enum FlowType implements ItemType {
 
-    LOGIN   (R.string.list_item_flow_login),
-    EULA    (R.string.list_item_flow_eula);
+    LOGIN   (R.string.flow_login),
+    EULA    (R.string.flow_eula);
 
     @StringRes
     private final int mStringRes;

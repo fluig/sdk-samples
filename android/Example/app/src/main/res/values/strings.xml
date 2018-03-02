@@ -6,8 +6,9 @@
     <string name="list_components">Componentes</string>
     <string name="list_notfound">O modo escolhido não está implementado.</string>
 
-    <string name="list_item_flow_login">Login</string>
-    <string name="list_item_flow_eula">Termos de Uso</string>
+    <!-- Flows -->
+    <string name="flow_login">Login</string>
+    <string name="flow_eula">Termos de Uso</string>
 
     <string name="list_item_components_button">FluigSdkButton</string>
     <string name="list_item_components_edittext">FluigSdkEditText</string>

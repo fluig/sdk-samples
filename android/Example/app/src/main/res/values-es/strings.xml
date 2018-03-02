@@ -6,7 +6,8 @@
     <string name="list_components">Components</string>
     <string name="list_notfound">El modo elegido no está implementado.</string>
 
-    <string name="list_item_flow_eula">Términos de Uso</string>
+    <!-- Flows -->
+    <string name="flow_eula">Términos de Uso</string>
 
     <!-- Success -->
     <string name="success">Éxito</string>
