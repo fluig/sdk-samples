@@ -17,12 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let main = MainViewController()
-        let navigationController = UINavigationController(rootViewController: main)
+        let navigationController = ExampleNavigationController(rootViewController: main)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = navigationController
         
         return true
+    }
+}
+
+private class ExampleNavigationController: UINavigationController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationBar.isOpaque = true
+        navigationBar.tintColor = .white
+        navigationBar.barTintColor = UIColor.app.blue
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
