@@ -23,7 +23,7 @@ android {
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'sdk.fluig.com:bllCore:0.2.1'
+    implementation 'sdk.fluig.com:bllCore:0.2.2'
 
     testImplementation 'junit:junit:4.12'
 
