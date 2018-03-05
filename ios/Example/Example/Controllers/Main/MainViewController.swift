@@ -92,7 +92,7 @@ extension MainViewController: MainViewDelegate {
     }
     
     func showLoginFlow() {
-        let logo: UIImage? = nil
+        let logo = UIImage(named: "loginLogo")
         let video = Bundle.main.url(forResource: "video_background",
                                     withExtension: "mp4")
         let pageTitle = L10n.loginTitle
