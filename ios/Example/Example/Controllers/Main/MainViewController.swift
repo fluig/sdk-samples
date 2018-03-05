@@ -51,6 +51,8 @@ class MainViewController: UITableViewController {
     }
     
     private func setupView() {
+        title = "Example"
+        
         tableView.tableFooterView = UIView()
         tableView.addSubview(refreshControl!)
         
