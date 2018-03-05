@@ -19,6 +19,7 @@
 		0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B09B9204D882B00B86BB5 /* UIColor+Extensions.swift */; };
 		0C9B09C1204DAACA00B86BB5 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B09C0204DAACA00B86BB5 /* MainPresenter.swift */; };
 		0CAABC2D204DE4690031FC1E /* video_background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CAABC2C204DE4690031FC1E /* video_background.mp4 */; };
+		0CAABC30204DEAB50031FC1E /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAABC2F204DEAB50031FC1E /* SuccessViewController.swift */; };
 		0CB6727F20497CCD00010F39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6727D20497CCD00010F39 /* Localizable.strings */; };
 		3D6F47C9133206CE5F95EFF3 /* Pods_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C745FF0AAF40BEEFE68AF9 /* Pods_ExampleTests.framework */; };
 		EF36104BC0BB913B6B35BE58 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B270C1DC0241EA265E5D8CB /* Pods_Example.framework */; };
@@ -53,6 +54,7 @@
 		0C9B09B9204D882B00B86BB5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0C9B09C0204DAACA00B86BB5 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		0CAABC2C204DE4690031FC1E /* video_background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_background.mp4; sourceTree = "<group>"; };
+		0CAABC2F204DEAB50031FC1E /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		0CB6727E20497CCD00010F39 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		106DCE4847FD2EC97F39ABA4 /* Pods-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E484B18423E1B1ECDAA9564 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0C12AED02049BA0000A5A2F4 /* Main */,
+				0CAABC2E204DEA920031FC1E /* Success */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +163,14 @@
 				0C69B6C2204600AA00C088DE /* Info.plist */,
 			);
 			path = ExampleTests;
+			sourceTree = "<group>";
+		};
+		0CAABC2E204DEA920031FC1E /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				0CAABC2F204DEAB50031FC1E /* SuccessViewController.swift */,
+			);
+			path = Success;
 			sourceTree = "<group>";
 		};
 		0CB6727C20497CAB00010F39 /* Resources */ = {
@@ -414,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */,
+				0CAABC30204DEAB50031FC1E /* SuccessViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,
