@@ -1,0 +1,23 @@
+package sdk.fluig.com.example.component.contract;
+
+import android.support.v4.app.Fragment;
+
+import sdk.fluig.com.example.base.contract.BaseView;
+import sdk.fluig.com.example.model.ComponentType;
+
+/**
+ * Created by gregorysholl on 27/02/18.
+ */
+
+public interface ComponentContract {
+
+    interface View extends BaseView<Presenter> {
+
+        void showFragment(Fragment fragment, String tag);
+    }
+
+    interface Presenter {
+
+        void obtainCorrectFragment(ComponentType componentType);
+    }
+}
