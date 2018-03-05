@@ -40,10 +40,14 @@ class MainViewController: UITableViewController {
         }
     }
     
+    private var presenter: MainPresenterDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+        
+        presenter = MainPresenter(view: self)
     }
     
     private func setupView() {
@@ -122,4 +126,14 @@ extension MainViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        
+        guard indexPath.row < list.count else { return }
+        
+        let itemType = list[indexPath.row]
+        presenter?.obtainNextStep(with: itemType)
+    }
 }
+
