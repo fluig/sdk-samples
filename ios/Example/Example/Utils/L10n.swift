@@ -7,6 +7,8 @@ import Foundation
 
 // swiftlint:disable identifier_name line_length type_body_length
 enum L10n {
+  /// Error
+  static let error = L10n.tr("Localizable", "error")
   /// FluigSDKButton
   static let componentButton = L10n.tr("Localizable", "component_button")
   /// FluigSDKMediaView
@@ -23,6 +25,14 @@ enum L10n {
   static let listComponents = L10n.tr("Localizable", "list_components")
   /// Flows
   static let listFlows = L10n.tr("Localizable", "list_flows")
+  /// The chosen mode is not implemented.
+  static let listNotFound = L10n.tr("Localizable", "list_notfound")
+  /// Success
+  static let success = L10n.tr("Localizable", "success")
+  /// You completed the flow %@.
+  static func successFlowSource(_ arg: String) -> String {
+    return L10n.tr("Localizable", "success_flow_source", arg)
+  }
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

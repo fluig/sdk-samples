@@ -6,8 +6,11 @@
   Copyright © 2018 fluig SDK. All rights reserved.
 */
 
+"error" = "Error";
+
 "list_flows" = "Flows";
 "list_components" = "Components";
+"list_notfound" = "The chosen mode is not implemented";
 
 "flow_login" = "Login";
 "flow_eula" = "EULA";
@@ -16,3 +19,6 @@
 "component_textField" = "FluigSDKTextField";
 "component_textFieldGroup" = "FluigSDKTextFieldGroup";
 "component_mediaView" = "FluigSDKMediaView";
+
+"success" = "Success";
+"success_flow_source" = "You completed the flow %@.";
