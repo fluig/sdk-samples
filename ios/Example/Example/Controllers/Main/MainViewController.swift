@@ -92,11 +92,17 @@ extension MainViewController: MainViewDelegate {
     }
     
     func showLoginFlow() {
-        let configuration = LoginFlowConfiguration(logoImage: nil,
-                                                   backgroundVideoUrl: nil,
-                                                   emailRequestPageTitle: nil,
-                                                   emailRequestPageTips: [],
-                                                   onSuccessReplaceRootWith: nil)
+        let logo: UIImage? = nil
+        let video: URL? = nil
+        let pageTitle: String = ""
+        let pageTips: [String] = []
+        let successViewController: UIViewController? = nil
+        
+        let configuration = LoginFlowConfiguration(logoImage: logo,
+                                                   backgroundVideoUrl: video,
+                                                   emailRequestPageTitle: pageTitle,
+                                                   emailRequestPageTips: pageTips,
+                                                   onSuccessReplaceRootWith: successViewController)
         
         LoginFlow(configuration: configuration).start(from: self)
     }
