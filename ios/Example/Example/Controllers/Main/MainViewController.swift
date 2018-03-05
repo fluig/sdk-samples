@@ -52,6 +52,10 @@ class MainViewController: UITableViewController {
     
     private func setupView() {
         title = "Example"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                           style: .plain,
+                                                           target: nil,
+                                                           action: nil)
         
         tableView.tableFooterView = UIView()
         tableView.addSubview(refreshControl!)
