@@ -95,8 +95,8 @@ extension MainViewController: MainViewDelegate {
         let logo: UIImage? = nil
         let video = Bundle.main.url(forResource: "video_background",
                                     withExtension: "mp4")
-        let pageTitle: String = ""
-        let pageTips: [String] = []
+        let pageTitle = L10n.loginTitle
+        let pageTips = [L10n.loginTipInfo, L10n.loginTipUrl]
         let successViewController: UIViewController? = nil
         
         let configuration = LoginFlowConfiguration(logoImage: logo,
