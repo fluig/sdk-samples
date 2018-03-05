@@ -1,0 +1,125 @@
+//
+//  MainViewController.swift
+//  Example
+//
+//  Created by Gregory Sholl e Santos on 02/03/18.
+//  Copyright © 2018 fluig SDK. All rights reserved.
+//
+
+import UIKit
+import fluigSDKFlows
+
+protocol MainViewDelegate: NSObjectProtocol {
+    
+    func showError(_ key: String)
+    
+    func showList(_ list: [ItemType])
+    
+    func showComponent(_ componentType: ComponentType)
+    
+    func showLoginFlow()
+    
+    func showEulaFlow()
+}
+
+// MARK: - MainViewController
+
+class MainViewController: UITableViewController {
+    
+    override lazy var refreshControl: UIRefreshControl? = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self,
+                                 action: #selector(refreshControlDidChangeValue(_:)),
+                                 for: .valueChanged)
+        return refreshControl
+    }()
+    
+    private var list: [ItemType] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupView()
+    }
+    
+    private func setupView() {
+        tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshControl!)
+        
+        list = ListType.allValues
+    }
+}
+
+// MARK: - Actions
+
+extension MainViewController {
+    
+    @objc func refreshControlDidChangeValue(_ refreshControl: UIRefreshControl) {
+        list = ListType.allValues
+        
+        refreshControl.endRefreshing()
+    }
+}
+
+// MARK: - MainViewDelegate
+
+extension MainViewController: MainViewDelegate {
+    
+    func showError(_ key: String) {
+        
+    }
+    
+    func showList(_ list: [ItemType]) {
+        self.list = list
+    }
+    
+    func showComponent(_ componentType: ComponentType) {
+        
+    }
+    
+    func showLoginFlow() {
+        let configuration = LoginFlowConfiguration(logoImage: nil,
+                                                   backgroundVideoUrl: nil,
+                                                   emailRequestPageTitle: nil,
+                                                   emailRequestPageTips: [],
+                                                   onSuccessReplaceRootWith: nil)
+        
+        LoginFlow(configuration: configuration).start(from: self)
+    }
+    
+    func showEulaFlow() {
+        let configuration = EulaFlowConfiguration(termsURL: nil,
+                                                  appName: "Example",
+                                                  backgroundColor: UIColor.app.blue)
+        
+        EulaFlow(configuration: configuration).start(from: self)
+    }
+}
+
+// MARK: - UITableViewDataSource & UITableViewDelegate
+
+extension MainViewController {
+    
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard indexPath.row < list.count else { return UITableViewCell() }
+        
+        let itemType = list[indexPath.row]
+        
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = L10n.get(itemType.rawValue)
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        return cell
+    }
+}
