@@ -9,6 +9,16 @@ import Foundation
 enum L10n {
   /// Error
   static let error = L10n.tr("Localizable", "error")
+  /// Components
+  static let listComponents = L10n.tr("Localizable", "list_components")
+  /// Flows
+  static let listFlows = L10n.tr("Localizable", "list_flows")
+  /// The chosen mode is not implemented.
+  static let listNotFound = L10n.tr("Localizable", "list_notfound")
+  /// EULA
+  static let flowEula = L10n.tr("Localizable", "flow_eula")
+  /// Login
+  static let flowLogin = L10n.tr("Localizable", "flow_login")
   /// FluigSDKButton
   static let componentButton = L10n.tr("Localizable", "component_button")
   /// FluigSDKMediaView
@@ -17,16 +27,12 @@ enum L10n {
   static let componentTextField = L10n.tr("Localizable", "component_textField")
   /// FluigSDKTextFieldGroup
   static let componentTextFieldGroup = L10n.tr("Localizable", "component_textFieldGroup")
-  /// EULA
-  static let flowEula = L10n.tr("Localizable", "flow_eula")
-  /// Login
-  static let flowLogin = L10n.tr("Localizable", "flow_login")
-  /// Components
-  static let listComponents = L10n.tr("Localizable", "list_components")
-  /// Flows
-  static let listFlows = L10n.tr("Localizable", "list_flows")
   /// The chosen mode is not implemented.
-  static let listNotFound = L10n.tr("Localizable", "list_notfound")
+  static let loginTitle = L10n.tr("Localizable", "login_title")
+  /// The chosen mode is not implemented.
+  static let loginTipInfo = L10n.tr("Localizable", "login_tip_info")
+  /// The chosen mode is not implemented.
+  static let loginTipUrl = L10n.tr("Localizable", "login_tip_url")
   /// Success
   static let success = L10n.tr("Localizable", "success")
   /// You completed the flow %@.

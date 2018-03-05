@@ -20,5 +20,9 @@
 "component_textFieldGroup" = "FluigSDKTextFieldGroup";
 "component_mediaView" = "FluigSDKMediaView";
 
+"login_title" = "Exemplo de fluxo de login";
+"login_tip_info" = "Para mais informações, consulte a documentação do SDK.";
+"login_tip_url" = "http://tdn.totvs.com/display/SDKF/Login";
+
 "success" = "Sucesso";
 "success_flow_source" = "Você completou o fluxo %@.";
