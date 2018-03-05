@@ -8,7 +8,10 @@
 
 import Foundation
 
-protocol ItemType {}
+protocol ItemType {
+    var rawValue: String { get }
+}
+
 
 enum ListType: String, ItemType {
     case flows = "list_flows"
