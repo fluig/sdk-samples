@@ -52,7 +52,7 @@ extension MainPresenter: MainPresenterDelegate {
             view?.showComponent(componentType)
             
         } else {
-            view?.showError("")
+            view?.showErrorMessage(L10n.listNotFound)
         }
     }
 }

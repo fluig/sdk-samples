@@ -11,7 +11,7 @@ import fluigSDKFlows
 
 protocol MainViewDelegate: NSObjectProtocol {
     
-    func showError(_ key: String)
+    func showErrorMessage(_ message: String)
     
     func showList(_ list: [ItemType])
     
@@ -75,8 +75,12 @@ extension MainViewController {
 
 extension MainViewController: MainViewDelegate {
     
-    func showError(_ key: String) {
-        
+    func showErrorMessage(_ message: String) {
+        let alert = UIAlertController(title: L10n.error,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
     
     func showList(_ list: [ItemType]) {
