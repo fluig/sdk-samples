@@ -93,7 +93,8 @@ extension MainViewController: MainViewDelegate {
     
     func showLoginFlow() {
         let logo: UIImage? = nil
-        let video: URL? = nil
+        let video = Bundle.main.url(forResource: "video_background",
+                                    withExtension: "mp4")
         let pageTitle: String = ""
         let pageTips: [String] = []
         let successViewController: UIViewController? = nil
