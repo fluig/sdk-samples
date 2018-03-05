@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Example</string>
+
+    <!-- List -->
+    <string name="list_flows">Flujos</string>
+    <string name="list_components">Components</string>
+    <string name="list_notfound">El modo elegido no está implementado.</string>
+
+    <!-- Flows -->
+    <string name="flow_eula">Términos de Uso</string>
+
+    <!-- Success -->
+    <string name="success">Éxito</string>
+    <string name="success_flow_source">Has completado el flujo #flow.</string>
+
+    <!-- EULA -->
+    <string name="eula_not_accepted">EULA no aceptado.</string>
+
+    <!-- Web View -->
+    <string name="web_view_no_additional_config">El uso de FluigSdkWebView es idéntico a un WebView estándar.</string>
+
+</resources>

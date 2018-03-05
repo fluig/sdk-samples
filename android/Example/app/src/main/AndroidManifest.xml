@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sdk.fluig.com.example">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".application.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- SDK -->
+        <!-- Login -->
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.email.view.EmailRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.server.view.ServerRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.password.view.PasswordRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.forgot.view.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.manual.view.ManualLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.account.view.AccountSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.login.mfa.view.MfaRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigLoginTheme.Light" />
+
+        <!-- EULA -->
+        <activity
+            android:name="sdk.fluig.com.bll.core.eula.accept.view.EulaAcceptActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FluigEulaTheme.Dark" />
+        <activity
+            android:name="sdk.fluig.com.bll.core.eula.terms.view.EulaTermsActivity"
+            android:theme="@style/FluigEulaTheme.Dark" />
+
+        <!-- App -->
+        <activity
+            android:name=".main.view.MainActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".success.view.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".component.view.ComponentActivity" />
+    </application>
+
+</manifest>

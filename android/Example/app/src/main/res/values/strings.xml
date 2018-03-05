@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Example</string>
+
+    <!-- List -->
+    <string name="list_flows">Fluxos</string>
+    <string name="list_components">Componentes</string>
+    <string name="list_notfound">O modo escolhido não está implementado.</string>
+
+    <!-- Flows -->
+    <string name="flow_login">Login</string>
+    <string name="flow_eula">Termos de Uso</string>
+
+    <!-- Components -->
+    <string name="components_button">FluigSdkButton</string>
+    <string name="components_edittext">FluigSdkEditText</string>
+    <string name="components_grouptext">FluigSdkGroupText</string>
+    <string name="components_mediaview">FluigSdkMediaView</string>
+    <string name="components_webview">FluigSdkWebView</string>
+
+    <!-- Success -->
+    <string name="success">Sucesso!</string>
+    <string name="success_flow_source">Você completou o fluxo #flow.</string>
+
+    <!-- EULA -->
+    <string name="eula_not_accepted">Termos de Uso não aceito.</string>
+
+    <!-- Web View -->
+    <string name="web_view_no_additional_config">O uso do FluigSdkWebView é idêntico a um WebView padrão.</string>
+
+</resources>

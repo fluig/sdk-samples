@@ -1,0 +1,7 @@
+{
+  "Authentication": {
+    "Protocol": "OAuth1",
+    "ConsumerKey": "<my_consumer_key>",
+    "ConsumerSecret": "<my_consumer_secret>"
+  }
+}
