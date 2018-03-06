@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ComponentViewDelegate {
+protocol ComponentViewDelegate: NSObjectProtocol {
     
     func showView(_ view: UIView)
 }
