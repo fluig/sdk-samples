@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ComponentView: UIView {
+protocol ComponentInfoProvider: NSObjectProtocol {
+    
+    func addComponent(to subview: inout UIView)
+    
+    func provideComponentText() -> String
+}
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class ComponentView: UIView {
+    init(provider: ComponentInfoProvider) {
+        super.init(frame: .zero)
+        self.provider = provider
     }
-    */
 
 }
