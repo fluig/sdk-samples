@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol ComponentPresenterDelegate {
+    
+    func obtainCorrectView(with componentType: ComponentType)
+}
+
+class ComponentPresenter {
+    
+}
