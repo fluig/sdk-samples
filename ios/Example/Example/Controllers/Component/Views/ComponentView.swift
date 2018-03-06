@@ -16,6 +16,9 @@ protocol ComponentInfoProvider: NSObjectProtocol {
 }
 
 class ComponentView: UIView {
+    
+    private weak var provider: ComponentInfoProvider?
+    
     init(provider: ComponentInfoProvider) {
         super.init(frame: .zero)
         self.provider = provider
