@@ -9,8 +9,6 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
-
-//    private
     
     private var flowName: String?
     
