@@ -15,4 +15,21 @@ protocol ComponentPresenterDelegate {
 
 class ComponentPresenter {
     
+    private weak var view: ComponentViewDelegate?
+    
+    init(view: ComponentViewDelegate) {
+        self.view = view
+    }
+}
+
+extension ComponentPresenter: ComponentPresenterDelegate {
+    
+    func obtainCorrectView(with componentType: ComponentType) {
+        switch componentType {
+        case .button:
+            view?.showView(ButtonView())
+        default:
+            break
+        }
+    }
 }
