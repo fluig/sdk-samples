@@ -22,7 +22,7 @@ protocol MainViewDelegate: NSObjectProtocol {
     func showEulaFlow()
 }
 
-// MARK: - MainViewController
+// MARK: - Inits & Lifecycle
 
 class MainViewController: UITableViewController {
     
@@ -48,19 +48,6 @@ class MainViewController: UITableViewController {
         setupView()
         
         presenter = MainPresenter(view: self)
-    }
-    
-    private func setupView() {
-        title = "Example"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
-                                                           style: .plain,
-                                                           target: nil,
-                                                           action: nil)
-        
-        tableView.tableFooterView = UIView()
-        tableView.addSubview(refreshControl!)
-        
-        list = ListType.allValues
     }
 }
 
@@ -154,3 +141,24 @@ extension MainViewController {
     }
 }
 
+// MARK: - Layout
+
+extension MainViewController {
+    
+    private func setupView() {
+        setupNavigationBar()
+        
+        tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshControl!)
+        
+        list = ListType.allValues
+    }
+    
+    private func setupNavigationBar() {
+        title = "Example"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                           style: .plain,
+                                                           target: nil,
+                                                           action: nil)
+    }
+}
