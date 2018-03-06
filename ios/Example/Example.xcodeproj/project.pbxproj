@@ -14,6 +14,7 @@
 		0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AECD20498DDE00A5A2F4 /* L10n.swift */; };
 		0C12AED22049BA1E00A5A2F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */; };
 		0C3984762048A42F0016AE85 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3984752048A42F0016AE85 /* ItemType.swift */; };
+		0C67E3E9204F423300A8422D /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67E3E8204F423300A8422D /* TextFieldView.swift */; };
 		0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6AB204600AA00C088DE /* AppDelegate.swift */; };
 		0C69B6B1204600AA00C088DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6AF204600AA00C088DE /* Main.storyboard */; };
 		0C69B6B3204600AA00C088DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6B2204600AA00C088DE /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		0C12AECD20498DDE00A5A2F4 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C3984752048A42F0016AE85 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		0C67E3E8204F423300A8422D /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		0C69B6A8204600AA00C088DE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69B6AB204600AA00C088DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C69B6B0204600AA00C088DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				0C0546A0204ED7C500B83318 /* ButtonView.swift */,
 				0C05469E204EC3AE00B83318 /* ComponentView.swift */,
+				0C67E3E8204F423300A8422D /* TextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			files = (
 				0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */,
 				0CAABC30204DEAB50031FC1E /* SuccessViewController.swift in Sources */,
+				0C67E3E9204F423300A8422D /* TextFieldView.swift in Sources */,
 				0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
