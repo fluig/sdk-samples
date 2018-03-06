@@ -79,7 +79,8 @@ extension MainViewController: MainViewDelegate {
     }
     
     func showComponent(_ componentType: ComponentType) {
-        
+        let viewController = ComponentViewController(componentType: componentType)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func showLoginFlow() {
