@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054691204EBB8F00B83318 /* ComponentViewController.swift */; };
+		0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054696204EC0DB00B83318 /* ComponentPresenter.swift */; };
 		0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AECD20498DDE00A5A2F4 /* L10n.swift */; };
 		0C12AED22049BA1E00A5A2F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */; };
 		0C3984762048A42F0016AE85 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3984752048A42F0016AE85 /* ItemType.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C054691204EBB8F00B83318 /* ComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentViewController.swift; sourceTree = "<group>"; };
+		0C054696204EC0DB00B83318 /* ComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPresenter.swift; sourceTree = "<group>"; };
 		0C12AEC620497EF600A5A2F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C12AECD20498DDE00A5A2F4 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C054690204EB4E500B83318 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0C054696204EC0DB00B83318 /* ComponentPresenter.swift */,
+				0C054691204EBB8F00B83318 /* ComponentViewController.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		0C12AEC7204988DE00A5A2F4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		0C12AECF2049B9F400A5A2F4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C054690204EB4E500B83318 /* Component */,
 				0C12AED02049BA0000A5A2F4 /* Main */,
 				0CAABC2E204DEA920031FC1E /* Success */,
 			);
@@ -426,9 +440,11 @@
 			files = (
 				0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */,
 				0CAABC30204DEAB50031FC1E /* SuccessViewController.swift in Sources */,
+				0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,
+				0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */,
 				0C9B09C1204DAACA00B86BB5 /* MainPresenter.swift in Sources */,
 				0C12AED22049BA1E00A5A2F4 /* MainViewController.swift in Sources */,
 			);
