@@ -32,6 +32,8 @@ extension ComponentPresenter: ComponentPresenterDelegate {
             view?.showView(ComponentView(provider: TextFieldProvider()))
         default:
             break
+        case .textFieldGroup:
+            view?.showView(ComponentView(provider: TextFieldGroupProvider()))
         }
     }
 }
