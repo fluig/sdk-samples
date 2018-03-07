@@ -86,14 +86,11 @@ extension MainViewController: MainViewDelegate {
     
     func showLoginFlow() {
         let logo = UIImage(named: "loginLogo")
-        let video = Bundle.main.url(forResource: "video_background",
-                                    withExtension: "mp4")
         let pageTitle = L10n.loginTitle
         let pageTips = [L10n.loginTipInfo, L10n.loginTipUrl]
         let successViewController = SuccessViewController(nibName: nil, bundle: nil)
         
         let configuration = LoginFlowConfiguration(logoImage: logo,
-                                                   backgroundVideoUrl: video,
                                                    emailRequestPageTitle: pageTitle,
                                                    emailRequestPageTips: pageTips,
                                                    onSuccessReplaceRootWith: successViewController)
