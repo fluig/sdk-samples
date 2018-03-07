@@ -13,8 +13,10 @@ extension L10n {
   public static func get(_ key: String, _ args: CVarArg...) -> String {
     let format = NSLocalizedString(key,
                                    tableName: "Localizable",
-                                   bundle: Bundle(for: BundleToken.self),
+                                   bundle: Bundle(for: BundleTokenExtension.self),
                                    comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }
 }
+
+private final class BundleTokenExtension {}
