@@ -188,5 +188,10 @@ extension MainViewController {
     
     @objc
     private func onEulaDeclined() {
+        let alert = UIAlertController(title: L10n.error,
+                                      message: L10n.eulaNotAccepted,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
