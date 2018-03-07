@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C01EBC2205008C100B51831 /* ButtonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC1205008C100B51831 /* ButtonProvider.swift */; };
+		0C01EBC420500A6C00B51831 /* TextFieldProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */; };
 		0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054691204EBB8F00B83318 /* ComponentViewController.swift */; };
 		0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054696204EC0DB00B83318 /* ComponentPresenter.swift */; };
 		0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C05469E204EC3AE00B83318 /* ComponentView.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C01EBC1205008C100B51831 /* ButtonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProvider.swift; sourceTree = "<group>"; };
+		0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldProvider.swift; sourceTree = "<group>"; };
 		0C054691204EBB8F00B83318 /* ComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentViewController.swift; sourceTree = "<group>"; };
 		0C054696204EC0DB00B83318 /* ComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPresenter.swift; sourceTree = "<group>"; };
 		0C05469E204EC3AE00B83318 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
@@ -94,9 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C01EBC0205008B000B51831 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				0C01EBC1205008C100B51831 /* ButtonProvider.swift */,
+				0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		0C054690204EB4E500B83318 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0C01EBC0205008B000B51831 /* Providers */,
 				0C054698204EC2D100B83318 /* Views */,
 				0C054696204EC0DB00B83318 /* ComponentPresenter.swift */,
 				0C054691204EBB8F00B83318 /* ComponentViewController.swift */,
@@ -457,12 +471,14 @@
 			files = (
 				0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */,
 				0CAABC30204DEAB50031FC1E /* SuccessViewController.swift in Sources */,
+				0C01EBC420500A6C00B51831 /* TextFieldProvider.swift in Sources */,
 				0C67E3E9204F423300A8422D /* TextFieldView.swift in Sources */,
 				0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,
 				0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */,
+				0C01EBC2205008C100B51831 /* ButtonProvider.swift in Sources */,
 				0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */,
 				0C0546A1204ED7C500B83318 /* ButtonView.swift in Sources */,
 				0C9B09C1204DAACA00B86BB5 /* MainPresenter.swift in Sources */,
