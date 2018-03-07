@@ -12,6 +12,7 @@
 		0C01EBC6205012BC00B51831 /* TextFieldGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC5205012BC00B51831 /* TextFieldGroupProvider.swift */; };
 		0C01EBC820501C3D00B51831 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC720501C3D00B51831 /* MediaView.swift */; };
 		0C01EBCF2050245D00B51831 /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = 0C01EBCE2050245D00B51831 /* eula.html */; };
+		0C01EBD12050280900B51831 /* L10n+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBD02050280900B51831 /* L10n+Extensions.swift */; };
 		0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054691204EBB8F00B83318 /* ComponentViewController.swift */; };
 		0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054696204EC0DB00B83318 /* ComponentPresenter.swift */; };
 		0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C05469E204EC3AE00B83318 /* ComponentView.swift */; };
@@ -49,6 +50,7 @@
 		0C01EBC5205012BC00B51831 /* TextFieldGroupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldGroupProvider.swift; sourceTree = "<group>"; };
 		0C01EBC720501C3D00B51831 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		0C01EBCE2050245D00B51831 /* eula.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = eula.html; sourceTree = "<group>"; };
+		0C01EBD02050280900B51831 /* L10n+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n+Extensions.swift"; sourceTree = "<group>"; };
 		0C054691204EBB8F00B83318 /* ComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentViewController.swift; sourceTree = "<group>"; };
 		0C054696204EC0DB00B83318 /* ComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPresenter.swift; sourceTree = "<group>"; };
 		0C05469E204EC3AE00B83318 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0C12AECD20498DDE00A5A2F4 /* L10n.swift */,
+				0C01EBD02050280900B51831 /* L10n+Extensions.swift */,
 				0C9B09B9204D882B00B86BB5 /* UIColor+Extensions.swift */,
 			);
 			path = Utils;
@@ -479,6 +482,7 @@
 				0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
 				0C01EBC6205012BC00B51831 /* TextFieldGroupProvider.swift in Sources */,
+				0C01EBD12050280900B51831 /* L10n+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,
 				0C01EBC820501C3D00B51831 /* MediaView.swift in Sources */,
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,

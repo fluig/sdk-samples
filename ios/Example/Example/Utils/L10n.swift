@@ -47,14 +47,6 @@ extension L10n {
     let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }
-  
-  public static func get(_ key: String, _ args: CVarArg...) -> String {
-    let format = NSLocalizedString(key,
-                                   tableName: "Localizable",
-                                   bundle: Bundle(for: BundleToken.self),
-                                   comment: "")
-     return String(format: format, locale: Locale.current, arguments: args)
-  }
 }
 
 private final class BundleToken {}
