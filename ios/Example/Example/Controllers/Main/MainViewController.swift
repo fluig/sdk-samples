@@ -46,6 +46,7 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
 
         setupView()
+        setupEulaNotification()
         
         presenter = MainPresenter(view: self)
     }
@@ -163,5 +164,32 @@ extension MainViewController {
                                                            style: .plain,
                                                            target: nil,
                                                            action: nil)
+    }
+}
+
+// MARK: - Notification
+
+extension MainViewController {
+    
+    private func setupEulaNotification() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onEulaAccepted),
+                                               name: .fluigSdkDidAcceptEula,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onEulaDeclined),
+                                               name: .fluigSdkDidNotAcceptEula,
+                                               object: nil)
+    }
+    
+    @objc
+    private func onEulaAccepted() {
+        let successViewController = SuccessViewController(flowName: "EULA")
+        navigationController?.pushViewController(successViewController,
+                                                 animated: true)
+    }
+    
+    @objc
+    private func onEulaDeclined() {
     }
 }
