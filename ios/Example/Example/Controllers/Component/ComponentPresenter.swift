@@ -30,10 +30,10 @@ extension ComponentPresenter: ComponentPresenterDelegate {
             view?.showView(ComponentView(provider: ButtonProvider()))
         case .textField:
             view?.showView(ComponentView(provider: TextFieldProvider()))
-        default:
-            break
         case .textFieldGroup:
             view?.showView(ComponentView(provider: TextFieldGroupProvider()))
+        case .mediaView:
+            view?.showView(MediaView())
         }
     }
 }
