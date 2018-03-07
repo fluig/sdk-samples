@@ -4,7 +4,7 @@
     <!-- List -->
     <string name="list_flows">Flows</string>
     <string name="list_components">Components</string>
-    <string name="list_notfound">The chosen mode is not implemented.</string>
+    <string name="list_not_found">The chosen mode is not implemented.</string>
 
     <!-- Flows -->
     <string name="flow_eula">EULA</string>
