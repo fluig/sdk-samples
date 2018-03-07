@@ -10,7 +10,7 @@
 
 "list_flows" = "Flows";
 "list_components" = "Components";
-"list_notfound" = "The chosen mode is not implemented";
+"list_not_found" = "The chosen mode is not implemented";
 
 "flow_login" = "Login";
 "flow_eula" = "EULA";

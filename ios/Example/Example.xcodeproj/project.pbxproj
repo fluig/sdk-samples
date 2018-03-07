@@ -266,6 +266,7 @@
 				0C69B6A6204600AA00C088DE /* Resources */,
 				28B50722446BA0D501484C96 /* [CP] Embed Pods Frameworks */,
 				97D136A31CC3457420DA3390 /* [CP] Copy Pods Resources */,
+				0C01EBD220502A0C00B51831 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -364,6 +365,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C01EBD220502A0C00B51831 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen strings -t flat-swift4 $PROJECT_DIR/Example/Resources/en.lproj/Localizable.strings -o $PROJECT_DIR/Example/Utils/L10n.swift";
+		};
 		28B50722446BA0D501484C96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
