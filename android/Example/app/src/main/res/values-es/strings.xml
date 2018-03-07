@@ -14,7 +14,7 @@
     <string name="success_flow_source">Has completado el flujo #flow.</string>
 
     <!-- EULA -->
-    <string name="eula_not_accepted">EULA no aceptado.</string>
+    <string name="eula_not_accepted">Términos de Uso no aceptado.</string>
 
     <!-- Web View -->
     <string name="web_view_no_additional_config">El uso de FluigSdkWebView es idéntico a un WebView estándar.</string>
