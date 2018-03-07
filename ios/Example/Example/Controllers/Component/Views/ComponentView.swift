@@ -63,11 +63,11 @@ extension ComponentView {
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: topAnchor,
-                                                constant: 16.0),
+                                               constant: 16.0),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                    constant: 16.0),
+                                                   constant: 16.0),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                     constant: -16.0)
+                                                    constant: -16.0)
         ])
     }
     
@@ -81,15 +81,15 @@ extension ComponentView {
         
         addSubview(textView)
         
-        NSLayoutConstraint.activate(
-            [textView.topAnchor.constraint(equalTo: containerView.bottomAnchor,
-                                             constant: 16.0),
-             textView.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                               constant: 16.0),
-             textView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                constant: -16.0),
-             textView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                              constant: 16.0)]
-        )
+        NSLayoutConstraint.activate([
+            textView.topAnchor.constraint(equalTo: containerView.bottomAnchor,
+                                          constant: 16.0),
+            textView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                              constant: 16.0),
+            textView.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                               constant: -16.0),
+            textView.bottomAnchor.constraint(equalTo: bottomAnchor,
+                                             constant: 16.0)
+        ])
     }
 }
