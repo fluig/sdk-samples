@@ -8,4 +8,4 @@ Como esses projetos utilizam os fluig SDKs, é recomendada a leitura da document
 
 Acesse a documentação de cada plataforma para mais informações sobre as funcionalidades disponíveis em cada aplicativo de exemplo:
 * [Android](android/docs/README.md)
-* [iOS](android/docs/README.md)
+* [iOS](ios/docs/README.md)
