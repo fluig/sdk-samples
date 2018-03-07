@@ -27,7 +27,9 @@ extension ComponentPresenter: ComponentPresenterDelegate {
     func obtainCorrectView(with componentType: ComponentType) {
         switch componentType {
         case .button:
-            view?.showView(ButtonView())
+            view?.showView(ComponentView(provider: ButtonProvider()))
+        case .textField:
+            view?.showView(ComponentView(provider: TextFieldProvider()))
         default:
             break
         }
