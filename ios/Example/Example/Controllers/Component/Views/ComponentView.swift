@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol ComponentInfoProvider: NSObjectProtocol {
+protocol ComponentInfoProvider {
     
-    func addComponent(to subview: inout UIView)
+    func provideComponent() -> UIView
     
     func provideComponentText() -> String
 }
@@ -19,7 +19,7 @@ class ComponentView: UIView {
     
     private var containerView = UIView()
     
-    private weak var provider: ComponentInfoProvider?
+    private var provider: ComponentInfoProvider?
     
     init(provider: ComponentInfoProvider) {
         super.init(frame: .zero)
@@ -47,18 +47,28 @@ extension ComponentView {
     
     private func setupContainerView() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        provider?.addComponent(to: &containerView)
+        
+        guard let component = provider?.provideComponent() else { return }
+        
+        containerView.addSubview(component)
+        
+        NSLayoutConstraint.activate([
+            component.topAnchor.constraint(equalTo: containerView.topAnchor),
+            component.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            component.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            component.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
         
         addSubview(containerView)
         
-        NSLayoutConstraint.activate(
-            [containerView.topAnchor.constraint(equalTo: topAnchor,
+        NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: topAnchor,
                                                 constant: 16.0),
-             containerView.leadingAnchor.constraint(equalTo: leadingAnchor,
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor,
                                                     constant: 16.0),
-             containerView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                     constant: -16.0)]
-        )
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                                     constant: -16.0)
+        ])
     }
     
     private func setupTextView() {
