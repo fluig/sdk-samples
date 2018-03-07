@@ -34,8 +34,8 @@ Os compoenentes com exemplo implementados estão marcados abaixo.
 - [x] `FluigSdkWebView`
 
 Para visualizar como os componentes são criados e alterados, acesse o `Fragment` correspondente. Por padrão, tente procurar pelo método `setupComponent()`.
-* [`ButtonFragment`](..Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/ButtonFragment.java) para `FluigSdkButton`
-* [`EditTextFragment`](..Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/EditTextFragment.java) para `FluigSdkEditText`
-* [`GroupTextFragment`](..Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/GroupTextFragment.java) para `FluigSdkGroupText`
-* [`MediaViewFragment`](..Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/MediaViewFragment.java) para `FluigSdkMediaView`
-* [`WebViewFragment`](..Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/WebViewFragment.java) para `FluigSdkWebView`
+* [`ButtonFragment`](../Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/ButtonFragment.java) para `FluigSdkButton`
+* [`EditTextFragment`](../Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/EditTextFragment.java) para `FluigSdkEditText`
+* [`GroupTextFragment`](../Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/GroupTextFragment.java) para `FluigSdkGroupText`
+* [`MediaViewFragment`](../Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/MediaViewFragment.java) para `FluigSdkMediaView`
+* [`WebViewFragment`](../Example/app/src/main/java/sdk/fluig/com/example/component/view/fragment/WebViewFragment.java) para `FluigSdkWebView`
