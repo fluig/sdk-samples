@@ -32,3 +32,12 @@ Os compoenentes com exemplo implementados estão marcados abaixo.
 - [ ] `FluigSDKProfilePic`
 - [x] `FluigSDKTextField`
 - [x] `FluigSDKTextFieldGroup`
+
+Para visualizar como os componentes são criados e alterados, há duas maneiras:
+* Através de classes `Provider` no caso de componentes que não necessitam ocupar a tela inteira. Neste caso, procure pelo método `provideComponent()`.
+    * [`ButtonProvider`](../Example/Example/Controllers/Component/Providers/ButtonProvider.swift) para `FluigSDKButton`
+    * [`TextFieldProvider`](../Example/Example/Controllers/Component/Providers/TextFieldProvider.swift) para `FluigSDKTextField`
+    * [`TextFieldGroupProvider`](../Example/Example/Controllers/Component/Providers/TextFieldGroupProvider.swift) para `FluigSDKTextFieldGroup`
+
+* Através de classes `View` nos outros casos. Por padrão, tente procurar pelo método `setupComponent()`.
+    * [`MediaView`](../Example/Example/Controllers/Component/Views/MediaView.swift) para `FluigSDKMediaView`
