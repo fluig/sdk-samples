@@ -18,8 +18,8 @@ Os fluxos com exemplo implementados estão marcados abaixo.
 Para visualizar como são iniciados os fluxos, siga os passos a seguir:
 1. Acesse a classe [`MainViewController`](../Example/Example/Controllers/Main/MainViewController.swift).
 2. Procure pelo método corresponde ao fluxo desejado.
-  * `showLoginFlow()` para Login
-  * `showEulaFlow()` para Termos de Uso
+    * `showLoginFlow()` para Login
+    * `showEulaFlow()` para Termos de Uso
 
 ### Componentes
 
