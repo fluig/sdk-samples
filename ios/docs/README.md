@@ -25,10 +25,10 @@ Para visualizar como são iniciados os fluxos, siga os passos a seguir:
 
 Os compoenentes com exemplo implementados estão marcados abaixo.
 
-- [x] FluigSDKButton
-- [x] FluigSDKLoadingView
-- [x] FluigSDKMediaView
-- [ ] FluigSDKPopUpView
-- [ ] FluigSDKProfilePic
-- [x] FluigSDKTextField
-- [x] FluigSDKTextFieldGroup
+- [x] `FluigSDKButton`
+- [x] `FluigSDKLoadingView`
+- [x] `FluigSDKMediaView`
+- [ ] `FluigSDKPopUpView`
+- [ ] `FluigSDKProfilePic`
+- [x] `FluigSDKTextField`
+- [x] `FluigSDKTextFieldGroup`
