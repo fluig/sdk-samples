@@ -4,7 +4,7 @@ Exemplos de uso e funcionalidades do SDK iOS sobre a plataforma _fluig_.
 
 ## Funcionalidades
 
-O projeto de exemplo do [fluig SDK iOS]() possui as seguintes funcionalidades:
+O projeto de exemplo do [fluig SDK iOS](https://github.com/fluig/fluigsdkios) possui as seguintes funcionalidades:
 * [Fluxos](#fluxos)
 * [Componentes de interface](#componentes)
 
