@@ -12,8 +12,8 @@ O projeto de exemplo do [fluig SDK iOS]() possui as seguintes funcionalidades:
 
 Os fluxos com exemplo implementados estão marcados abaixo.
 
-[x] Login
-[x] Termos de Uso
+- [x] Login
+- [x] Termos de Uso
 
 Para visualizar como são iniciados os fluxos, siga os passos a seguir:
 1. Acesse a classe [`MainViewController`](../Example/Example/Controllers/Main/MainViewController.swift).
