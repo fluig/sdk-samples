@@ -26,6 +26,8 @@ protocol MainViewDelegate: NSObjectProtocol {
 
 class MainViewController: UITableViewController {
     
+    private var flowAlertPending: FlowType?
+    
     override lazy var refreshControl: UIRefreshControl? = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
@@ -49,6 +51,19 @@ class MainViewController: UITableViewController {
         setupEulaNotification()
         
         presenter = MainPresenter(view: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let alertPending = flowAlertPending {
+            switch alertPending {
+            case .eula:
+                showEulaAlert()
+            case .login:
+                break
+            }
+        }
     }
 }
 
@@ -164,7 +179,7 @@ extension MainViewController {
     }
 }
 
-// MARK: - Notification
+// MARK: - EULA Notifications
 
 extension MainViewController {
     
@@ -188,6 +203,10 @@ extension MainViewController {
     
     @objc
     private func onEulaDeclined() {
+        flowAlertPending = .eula
+    }
+    
+    private func showEulaAlert() {
         let alert = UIAlertController(title: L10n.error,
                                       message: L10n.eulaNotAccepted,
                                       preferredStyle: .alert)
