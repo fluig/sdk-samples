@@ -11,6 +11,7 @@
 		0C01EBC420500A6C00B51831 /* TextFieldProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */; };
 		0C01EBC6205012BC00B51831 /* TextFieldGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC5205012BC00B51831 /* TextFieldGroupProvider.swift */; };
 		0C01EBC820501C3D00B51831 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EBC720501C3D00B51831 /* MediaView.swift */; };
+		0C01EBCF2050245D00B51831 /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = 0C01EBCE2050245D00B51831 /* eula.html */; };
 		0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054691204EBB8F00B83318 /* ComponentViewController.swift */; };
 		0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C054696204EC0DB00B83318 /* ComponentPresenter.swift */; };
 		0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C05469E204EC3AE00B83318 /* ComponentView.swift */; };
@@ -47,6 +48,7 @@
 		0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldProvider.swift; sourceTree = "<group>"; };
 		0C01EBC5205012BC00B51831 /* TextFieldGroupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldGroupProvider.swift; sourceTree = "<group>"; };
 		0C01EBC720501C3D00B51831 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		0C01EBCE2050245D00B51831 /* eula.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = eula.html; sourceTree = "<group>"; };
 		0C054691204EBB8F00B83318 /* ComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentViewController.swift; sourceTree = "<group>"; };
 		0C054696204EC0DB00B83318 /* ComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPresenter.swift; sourceTree = "<group>"; };
 		0C05469E204EC3AE00B83318 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		0CB6727C20497CAB00010F39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C01EBCE2050245D00B51831 /* eula.html */,
 				0CAABC2C204DE4690031FC1E /* video_background.mp4 */,
 				0CB6727D20497CCD00010F39 /* Localizable.strings */,
 			);
@@ -343,6 +346,7 @@
 				0C69B6CC2046040000C088DE /* fluigSDK.plist in Resources */,
 				0CAABC2D204DE4690031FC1E /* video_background.mp4 in Resources */,
 				0C69B6B3204600AA00C088DE /* Assets.xcassets in Resources */,
+				0C01EBCF2050245D00B51831 /* eula.html in Resources */,
 				0C69B6B1204600AA00C088DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -101,7 +101,9 @@ extension MainViewController: MainViewDelegate {
     }
     
     func showEulaFlow() {
-        let configuration = EulaFlowConfiguration(termsURL: nil,
+        let terms = Bundle.main.url(forResource: "eula", withExtension: "html")
+        
+        let configuration = EulaFlowConfiguration(termsURL: terms,
                                                   appName: "Example",
                                                   backgroundColor: UIColor.app.blue)
         
