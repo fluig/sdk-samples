@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Example
+
+  Created by Gregory Sholl e Santos on 02/03/18.
+  Copyright © 2018 fluig SDK. All rights reserved.
+*/
+
+"error" = "Error";
+
+"list_flows" = "Flows";
+"list_components" = "Components";
+"list_not_found" = "The chosen mode is not implemented";
+
+"flow_login" = "Login";
+"flow_eula" = "EULA";
+
+"component_button" = "FluigSDKButton";
+"component_textField" = "FluigSDKTextField";
+"component_textFieldGroup" = "FluigSDKTextFieldGroup";
+"component_mediaView" = "FluigSDKMediaView";
+
+"login_title" = "Login flow example";
+"login_tip_info" = "For more information, check the SDK documentation.";
+"login_tip_url" = "http://tdn.totvs.com/display/SDKF/Login";
+
+"eula_not_accepted" = "EULA not accepted.";
+
+"success" = "Success";
+"success_flow_source" = "You completed the flow %@.";
