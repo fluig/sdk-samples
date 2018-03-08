@@ -6,4 +6,20 @@
 //  Copyright © 2018 fluig SDK. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import fluigSDKUi
+
+struct ProfilePicProvider: ComponentInfoProvider {
+    
+    func provideComponent() -> UIView {
+        let profilePic = FluigSDKProfilePic()
+        profilePic.image = nil
+        
+        return profilePic
+    }
+    
+    func provideComponentText() -> String {
+        return """
+        """
+    }
+}
