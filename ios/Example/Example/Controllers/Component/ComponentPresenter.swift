@@ -34,6 +34,8 @@ extension ComponentPresenter: ComponentPresenterDelegate {
             view?.showView(ComponentView(provider: TextFieldGroupProvider()))
         case .mediaView:
             view?.showView(MediaView())
+        case .profilePic:
+            view?.showView(ComponentView(provider: ProfilePicProvider()))
         }
     }
 }
