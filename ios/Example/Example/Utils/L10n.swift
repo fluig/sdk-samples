@@ -11,6 +11,8 @@ enum L10n {
   static let componentButton = L10n.tr("Localizable", "component_button")
   /// FluigSDKMediaView
   static let componentMediaView = L10n.tr("Localizable", "component_mediaView")
+  /// FluigSDKProfilePic
+  static let componentProfilePic = L10n.tr("Localizable", "component_profilePic")
   /// FluigSDKTextField
   static let componentTextField = L10n.tr("Localizable", "component_textField")
   /// FluigSDKTextFieldGroup

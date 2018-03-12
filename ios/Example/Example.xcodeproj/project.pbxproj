@@ -18,6 +18,8 @@
 		0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C05469E204EC3AE00B83318 /* ComponentView.swift */; };
 		0C12AECE20498DDF00A5A2F4 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AECD20498DDE00A5A2F4 /* L10n.swift */; };
 		0C12AED22049BA1E00A5A2F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */; };
+		0C2CD0412051ACDF00E1766A /* ProfilePicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2CD0402051ACDF00E1766A /* ProfilePicProvider.swift */; };
+		0C2CD0432051AE0D00E1766A /* doge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C2CD0422051AE0D00E1766A /* doge.jpg */; };
 		0C3984762048A42F0016AE85 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3984752048A42F0016AE85 /* ItemType.swift */; };
 		0C4B69D82056AF4A00F61CFF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B69D72056AF4A00F61CFF /* UIViewController+Extensions.swift */; };
 		0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6AB204600AA00C088DE /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		0C12AEC620497EF600A5A2F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C12AECD20498DDE00A5A2F4 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		0C12AED12049BA1E00A5A2F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0C2CD0402051ACDF00E1766A /* ProfilePicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicProvider.swift; sourceTree = "<group>"; };
+		0C2CD0422051AE0D00E1766A /* doge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doge.jpg; sourceTree = "<group>"; };
 		0C3984752048A42F0016AE85 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		0C4B69D72056AF4A00F61CFF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		0C69B6A8204600AA00C088DE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0C01EBC1205008C100B51831 /* ButtonProvider.swift */,
+				0C2CD0402051ACDF00E1766A /* ProfilePicProvider.swift */,
 				0C01EBC320500A6C00B51831 /* TextFieldProvider.swift */,
 				0C01EBC5205012BC00B51831 /* TextFieldGroupProvider.swift */,
 			);
@@ -229,6 +234,7 @@
 		0CB6727C20497CAB00010F39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C2CD0422051AE0D00E1766A /* doge.jpg */,
 				0C01EBCE2050245D00B51831 /* eula.html */,
 				0CAABC2C204DE4690031FC1E /* video_background.mp4 */,
 				0CB6727D20497CCD00010F39 /* Localizable.strings */,
@@ -354,6 +360,7 @@
 				0CAABC2D204DE4690031FC1E /* video_background.mp4 in Resources */,
 				0C69B6B3204600AA00C088DE /* Assets.xcassets in Resources */,
 				0C01EBCF2050245D00B51831 /* eula.html in Resources */,
+				0C2CD0432051AE0D00E1766A /* doge.jpg in Resources */,
 				0C69B6B1204600AA00C088DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +506,7 @@
 				0C01EBC420500A6C00B51831 /* TextFieldProvider.swift in Sources */,
 				0C054692204EBB8F00B83318 /* ComponentViewController.swift in Sources */,
 				0C9B09BA204D882B00B86BB5 /* UIColor+Extensions.swift in Sources */,
+				0C2CD0412051ACDF00E1766A /* ProfilePicProvider.swift in Sources */,
 				0C01EBC6205012BC00B51831 /* TextFieldGroupProvider.swift in Sources */,
 				0C01EBD12050280900B51831 /* L10n+Extensions.swift in Sources */,
 				0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */,

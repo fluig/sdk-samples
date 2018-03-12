@@ -19,6 +19,7 @@
 "component_textField" = "FluigSDKTextField";
 "component_textFieldGroup" = "FluigSDKTextFieldGroup";
 "component_mediaView" = "FluigSDKMediaView";
+"component_profilePic" = "FluigSDKProfilePic";
 
 "login_title" = "Ejemplo de flujo de login";
 "login_tip_info" = "Para obtener más informaçión, consulte la documentación del SDK.";

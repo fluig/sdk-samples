@@ -27,6 +27,7 @@ enum ComponentType: String, ItemType, EnumCollection {
     case textField = "component_textField"
     case textFieldGroup = "component_textFieldGroup"
     case mediaView = "component_mediaView"
+    case profilePic = "component_profilePic"
 }
 
 protocol EnumCollection: Hashable {}
