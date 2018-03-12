@@ -169,14 +169,6 @@ extension MainViewController {
         
         list = ListType.allValues
     }
-    
-    private func setupNavigationBar() {
-        title = "Example"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
-                                                           style: .plain,
-                                                           target: nil,
-                                                           action: nil)
-    }
 }
 
 // MARK: - EULA Notifications
