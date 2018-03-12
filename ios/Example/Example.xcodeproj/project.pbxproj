@@ -21,6 +21,7 @@
 		0C2CD0412051ACDF00E1766A /* ProfilePicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2CD0402051ACDF00E1766A /* ProfilePicProvider.swift */; };
 		0C2CD0432051AE0D00E1766A /* doge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C2CD0422051AE0D00E1766A /* doge.jpg */; };
 		0C3984762048A42F0016AE85 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3984752048A42F0016AE85 /* ItemType.swift */; };
+		0C4B69D82056AF4A00F61CFF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B69D72056AF4A00F61CFF /* UIViewController+Extensions.swift */; };
 		0C69B6AC204600AA00C088DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69B6AB204600AA00C088DE /* AppDelegate.swift */; };
 		0C69B6B1204600AA00C088DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6AF204600AA00C088DE /* Main.storyboard */; };
 		0C69B6B3204600AA00C088DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C69B6B2204600AA00C088DE /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		0C2CD0402051ACDF00E1766A /* ProfilePicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicProvider.swift; sourceTree = "<group>"; };
 		0C2CD0422051AE0D00E1766A /* doge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doge.jpg; sourceTree = "<group>"; };
 		0C3984752048A42F0016AE85 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		0C4B69D72056AF4A00F61CFF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		0C69B6A8204600AA00C088DE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69B6AB204600AA00C088DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C69B6B0204600AA00C088DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				0C12AECD20498DDE00A5A2F4 /* L10n.swift */,
 				0C01EBD02050280900B51831 /* L10n+Extensions.swift */,
 				0C9B09B9204D882B00B86BB5 /* UIColor+Extensions.swift */,
+				0C4B69D72056AF4A00F61CFF /* UIViewController+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				0C3984762048A42F0016AE85 /* ItemType.swift in Sources */,
 				0C05469F204EC3AE00B83318 /* ComponentView.swift in Sources */,
 				0C01EBC2205008C100B51831 /* ButtonProvider.swift in Sources */,
+				0C4B69D82056AF4A00F61CFF /* UIViewController+Extensions.swift in Sources */,
 				0C054697204EC0DB00B83318 /* ComponentPresenter.swift in Sources */,
 				0C9B09C1204DAACA00B86BB5 /* MainPresenter.swift in Sources */,
 				0C12AED22049BA1E00A5A2F4 /* MainViewController.swift in Sources */,
