@@ -37,6 +37,8 @@ class ComponentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBar()
+
         guard let component = componentType else { return }
         
         presenter = ComponentPresenter(view: self)
