@@ -71,7 +71,8 @@ extension SuccessViewController {
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        _ = views.map { stackView.addArrangedSubview($0) }
+        
+        views.forEach { stackView.addArrangedSubview($0) }
         
         view.backgroundColor = .white
         view.addSubview(stackView)

@@ -49,9 +49,7 @@ class ComponentViewController: UIViewController {
 extension ComponentViewController: ComponentViewDelegate {
     
     func showView(_ view: UIView) {
-        if self.view.subviews.count > 0 {
-            self.view.subviews.forEach { $0.removeFromSuperview() }
-        }
+        self.view.subviews.forEach { $0.removeFromSuperview() }
         self.view.addSubview(view)
         
         if #available(iOS 11.0, *) {
