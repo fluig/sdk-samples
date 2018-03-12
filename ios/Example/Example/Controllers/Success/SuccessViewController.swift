@@ -44,14 +44,6 @@ extension SuccessViewController {
         setupStackView(labels)
     }
     
-    private func setupNavigationBar() {
-        title = "Example"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
-                                                           style: .plain,
-                                                           target: nil,
-                                                           action: nil)
-    }
-    
     private func setupLabels() -> [UILabel] {
         var labels = [UILabel]()
         
