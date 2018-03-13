@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,9 +53,11 @@ public class ProfileThumbFragment extends Fragment {
         Context context = getContext();
         final int SIDE = (int) (100 * context.getResources().getDisplayMetrics().density);
 
-        FluigSdkProfileThumb profileThumb = new FluigSdkProfileThumb(context);
-        profileThumb.setLayoutParams(new LinearLayout.LayoutParams(SIDE, SIDE));
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(SIDE, SIDE);
+        layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
 
+        FluigSdkProfileThumb profileThumb = new FluigSdkProfileThumb(context);
+        profileThumb.setLayoutParams(layoutParams);
         profileThumb.setImageResource(R.drawable.doge);
         profileThumb.setBorderColor(Color.BLACK);
         profileThumb.setBorderColorEnd(Color.RED);
