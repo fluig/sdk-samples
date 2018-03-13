@@ -13,7 +13,7 @@ public interface ComponentContract {
 
     interface View extends BaseView<Presenter> {
 
-        void showFragment(Fragment fragment, String tag);
+        void showFragment(Fragment fragment);
     }
 
     interface Presenter {

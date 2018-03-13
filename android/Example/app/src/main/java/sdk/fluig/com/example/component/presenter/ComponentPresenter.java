@@ -29,22 +29,22 @@ public class ComponentPresenter implements ComponentContract.Presenter {
     public void obtainCorrectFragment(ComponentType componentType) {
         switch (componentType) {
             case BUTTON:
-                mView.showFragment(new ButtonFragment(), ButtonFragment.TAG);
+                mView.showFragment(new ButtonFragment());
                 break;
             case EDIT_TEXT:
-                mView.showFragment(new EditTextFragment(), EditTextFragment.TAG);
+                mView.showFragment(new EditTextFragment());
                 break;
             case GROUP_TEXT:
-                mView.showFragment(new GroupTextFragment(), GroupTextFragment.TAG);
+                mView.showFragment(new GroupTextFragment());
                 break;
             case MEDIA_VIEW:
-                mView.showFragment(new MediaViewFragment(), MediaViewFragment.TAG);
+                mView.showFragment(new MediaViewFragment());
                 break;
             case PROFILE_THUMB:
                 mView.showFragment(new ProfileThumbFragment(), ProfileThumbFragment.TAG);
                 break;
             case WEB_VIEW:
-                mView.showFragment(new WebViewFragment(), WebViewFragment.TAG);
+                mView.showFragment(new WebViewFragment());
                 break;
         }
     }

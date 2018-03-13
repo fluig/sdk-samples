@@ -46,8 +46,9 @@ public class ComponentActivity extends AppCompatActivity
     }
 
     @Override
-    public void showFragment(Fragment fragment, String tag) {
-        GuiUtils.addFragment(this, R.id.componentActivity_fragmentContainer, fragment, tag);
+    public void showFragment(Fragment fragment) {
+        GuiUtils.addFragment(this, R.id.componentActivity_fragmentContainer, fragment,
+                fragment.getClass().getSimpleName());
     }
     //endregion
 }
