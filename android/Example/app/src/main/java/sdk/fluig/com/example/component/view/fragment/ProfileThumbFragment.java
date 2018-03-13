@@ -50,12 +50,10 @@ public class ProfileThumbFragment extends Fragment {
 
     private void setupComponent(View view) {
         Context context = getContext();
+        final int SIDE = (int) (100 * context.getResources().getDisplayMetrics().density);
 
         FluigSdkProfileThumb profileThumb = new FluigSdkProfileThumb(context);
-        profileThumb.setLayoutParams(new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-        ));
+        profileThumb.setLayoutParams(new LinearLayout.LayoutParams(SIDE, SIDE));
 
         profileThumb.setImageResource(R.drawable.doge);
         profileThumb.setBorderColor(Color.BLACK);
