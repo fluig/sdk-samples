@@ -18,10 +18,6 @@ public class MediaViewFragment extends Fragment {
 
     public static final String TAG = MediaViewFragment.class.getSimpleName();
 
-    //region Constructors
-    public MediaViewFragment() {}
-    //endregion
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

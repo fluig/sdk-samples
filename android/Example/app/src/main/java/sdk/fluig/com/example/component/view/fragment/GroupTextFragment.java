@@ -20,10 +20,6 @@ public class GroupTextFragment extends Fragment {
 
     public static final String TAG = GroupTextFragment.class.getSimpleName();
 
-    //region Constructors
-    public GroupTextFragment() {}
-    //endregion
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

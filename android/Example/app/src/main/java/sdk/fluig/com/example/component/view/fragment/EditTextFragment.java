@@ -19,10 +19,6 @@ public class EditTextFragment extends Fragment {
 
     public static final String TAG = EditTextFragment.class.getSimpleName();
 
-    //region Constructors
-    public EditTextFragment() {}
-    //endregion
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

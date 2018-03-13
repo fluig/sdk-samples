@@ -19,10 +19,6 @@ public class ButtonFragment extends Fragment {
 
     public static final String TAG = ButtonFragment.class.getSimpleName();
 
-    //region Constructors
-    public ButtonFragment() {}
-    //endregion
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

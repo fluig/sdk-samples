@@ -18,10 +18,6 @@ public class WebViewFragment extends Fragment {
 
     public static final String TAG = WebViewFragment.class.getSimpleName();
 
-    //region Constructors
-    public WebViewFragment() {}
-    //endregion
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater,
