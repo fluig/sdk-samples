@@ -41,7 +41,7 @@ public class ComponentPresenter implements ComponentContract.Presenter {
                 mView.showFragment(new MediaViewFragment());
                 break;
             case PROFILE_THUMB:
-                mView.showFragment(new ProfileThumbFragment(), ProfileThumbFragment.TAG);
+                mView.showFragment(new ProfileThumbFragment());
                 break;
             case WEB_VIEW:
                 mView.showFragment(new WebViewFragment());
