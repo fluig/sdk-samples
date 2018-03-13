@@ -17,8 +17,6 @@ import sdk.fluig.com.ui.components.edittext.FluigSdkEditText;
  */
 public class EditTextFragment extends Fragment {
 
-    public static final String TAG = EditTextFragment.class.getSimpleName();
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

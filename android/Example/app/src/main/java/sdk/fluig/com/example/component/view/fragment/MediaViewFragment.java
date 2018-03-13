@@ -1,6 +1,5 @@
 package sdk.fluig.com.example.component.view.fragment;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,8 +14,6 @@ import sdk.fluig.com.ui.components.mediaview.FluigSdkMediaView;
  * A simple {@link Fragment} subclass.
  */
 public class MediaViewFragment extends Fragment {
-
-    public static final String TAG = MediaViewFragment.class.getSimpleName();
 
     //region Lifecycle
     @Override

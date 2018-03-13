@@ -18,8 +18,6 @@ import sdk.fluig.com.ui.components.edittext.FluigSdkGroupText;
  */
 public class GroupTextFragment extends Fragment {
 
-    public static final String TAG = GroupTextFragment.class.getSimpleName();
-
     //region Lifecycle
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
