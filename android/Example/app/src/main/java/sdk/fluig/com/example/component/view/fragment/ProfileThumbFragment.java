@@ -74,8 +74,8 @@ public class ProfileThumbFragment extends Fragment {
                 "<sdk.fluig.com.ui.components.thumb.FluigSdkProfileThumb\n" +
                 "    android:layout_width=\"100dp\"\n" +
                 "    android:layout_height=\"100dp\">\n" +
-                "    android:src=\"@drawable/doge\"" +
-                "    app:borderColor=\"@color/black\"" +
+                "    android:src=\"@drawable/doge\"\n" +
+                "    app:borderColor=\"@color/black\"\n" +
                 "    app:borderColorEnd=\"@color/red\" />\n";
 
         TextView textView = view.findViewById(R.id.componentFragment_textView);
