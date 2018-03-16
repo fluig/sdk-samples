@@ -8,9 +8,13 @@
 
 import Foundation
 
+// MARK: - Protocol
+
 protocol MainPresenterDelegate {
     func obtainNextStep(with itemType: ItemType)
 }
+
+// MARK: - Initializers & Properties
 
 class MainPresenter {
     
@@ -38,6 +42,8 @@ class MainPresenter {
         }
     }
 }
+
+// MARK: - Delegate
 
 extension MainPresenter: MainPresenterDelegate {
     

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Initializers & Properties & Lifecycle
+
 class SuccessViewController: UIViewController {
     
     private var flowName: String?

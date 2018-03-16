@@ -8,10 +8,14 @@
 
 import UIKit
 
+// MARK: - Protocol
+
 protocol ComponentViewDelegate: NSObjectProtocol {
     
     func showView(_ view: UIView)
 }
+
+// MARK: - Initializers & Properties
 
 class ComponentViewController: UIViewController {
 
@@ -46,12 +50,16 @@ class ComponentViewController: UIViewController {
     }
 }
 
+// MARK: - Rotation Delegate
+
 extension ComponentViewController: RotationDelegate {
     
     var enableRotation: Bool {
         return true
     }
 }
+
+// MARK: - Delegate
 
 extension ComponentViewController: ComponentViewDelegate {
     

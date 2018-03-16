@@ -9,6 +9,8 @@
 import UIKit
 import fluigSDKFlows
 
+// MARK: - Protocol
+
 protocol MainViewDelegate: NSObjectProtocol {
     
     func showErrorMessage(_ message: String)
@@ -22,7 +24,7 @@ protocol MainViewDelegate: NSObjectProtocol {
     func showEulaFlow()
 }
 
-// MARK: - Inits & Lifecycle
+// MARK: - Initializers & Properties & Lifecycle
 
 class MainViewController: UITableViewController {
     
@@ -78,7 +80,7 @@ extension MainViewController {
     }
 }
 
-// MARK: - MainViewDelegate
+// MARK: - Delegate
 
 extension MainViewController: MainViewDelegate {
     
