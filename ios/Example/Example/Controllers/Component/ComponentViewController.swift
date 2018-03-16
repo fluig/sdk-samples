@@ -46,6 +46,13 @@ class ComponentViewController: UIViewController {
     }
 }
 
+extension ComponentViewController: RotationDelegate {
+    
+    var enableRotation: Bool {
+        return true
+    }
+}
+
 extension ComponentViewController: ComponentViewDelegate {
     
     func showView(_ view: UIView) {
