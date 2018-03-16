@@ -8,10 +8,14 @@
 
 import Foundation
 
+// MARK: - Protocol
+
 protocol ComponentPresenterDelegate {
     
     func obtainCorrectView(with componentType: ComponentType)
 }
+
+// MARK: - Initializers & Properties
 
 class ComponentPresenter {
     
@@ -21,6 +25,8 @@ class ComponentPresenter {
         self.view = view
     }
 }
+
+// MARK: - Delegate
 
 extension ComponentPresenter: ComponentPresenterDelegate {
     

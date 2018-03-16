@@ -59,9 +59,9 @@ extension MediaView {
     private func setupTextView() {
         let textView = UITextView()
         textView.text = """
-        mediaView.videoUrl = Bundle.main.url(forResource: "video_background",
-                                             withExtension: "mp4")
+        mediaView.videoUrl = Bundle.main.url(forResource: "video_background", withExtension: "mp4")
         """
+        textView.backgroundColor = .clear
         textView.textColor = .black
         textView.font = UIFont(name: "Menlo", size: 17.0)
         textView.isEditable = false
@@ -70,14 +70,16 @@ extension MediaView {
         addSubview(textView)
         
         NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: bottomAnchor,
+            textView.topAnchor.constraint(equalTo: topAnchor,
                                           constant: 16.0),
             textView.leadingAnchor.constraint(equalTo: leadingAnchor,
                                               constant: 16.0),
             textView.trailingAnchor.constraint(equalTo: trailingAnchor,
                                                constant: -16.0),
             textView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                             constant: 16.0)
+                                             constant: -16.0)
         ])
     }
+    
+    
 }
