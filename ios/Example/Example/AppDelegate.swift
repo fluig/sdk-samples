@@ -37,4 +37,21 @@ private class ExampleNavigationController: UINavigationController {
         navigationBar.barTintColor = UIColor.app.blue
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
+    
+    private var rotationDelegate: RotationDelegate? {
+        var delegate = topViewController as? RotationDelegate
+        if delegate == nil {
+            delegate = presentedViewController as? RotationDelegate
+        }
+        return delegate
+    }
+    
+    override var shouldAutorotate: Bool {
+        return rotationDelegate?.enableRotation ?? false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return (rotationDelegate?.enableRotation ?? false) ?
+            .allButUpsideDown : .portrait
+    }
 }
