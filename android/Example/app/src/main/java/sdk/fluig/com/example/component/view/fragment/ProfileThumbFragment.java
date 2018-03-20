@@ -63,7 +63,7 @@ public class ProfileThumbFragment extends Fragment {
     private void setupTextView(View view) {
         String text = "profileThumb.setImageResource(R.drawable.doge);\n" +
                 "profileThumb.setBorderColor(Color.BLACK);\n" +
-                "profileThumb.setBorderColor(Color.RED);\n\n";
+                "profileThumb.setBorderColorEnd(Color.RED);\n\n";
 
         text = text +
                 "<sdk.fluig.com.ui.components.thumb.FluigSdkProfileThumb\n" +
@@ -71,7 +71,7 @@ public class ProfileThumbFragment extends Fragment {
                 "    android:layout_height=\"100dp\"\n" +
                 "    android:src=\"@drawable/doge\"\n" +
                 "    app:borderColor=\"@color/black\"\n" +
-                "    app:borderColorEnd=\"@color/red\" />\n";
+                "    app:borderColor_end=\"@color/red\" />\n";
 
         TextView textView = view.findViewById(R.id.componentFragment_textView);
         textView.setText(text);

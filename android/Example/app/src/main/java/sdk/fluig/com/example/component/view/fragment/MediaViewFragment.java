@@ -49,7 +49,7 @@ public class MediaViewFragment extends Fragment {
         text = text +
                 "<sdk.fluig.com.ui.components.mediaview.FluigSdkMediaView\n" +
                 "    android:layout_width=\"match_parent\"\n" +
-                "    android:layout_height=\"match_parent\">\n" +
+                "    android:layout_height=\"match_parent\"\n" +
                 "    app:video=\"@raw/video_background\" />\n";
 
         TextView textView = view.findViewById(R.id.mediaViewFragment_textView);
