@@ -1,33 +1,33 @@
 PODS:
-  - fluigsdk (0.2.3):
-    - fluigsdk/core (= 0.2.3)
-    - fluigsdk/flows (= 0.2.3)
-    - fluigsdk/ui (= 0.2.3)
-  - fluigsdk/core (0.2.3)
-  - fluigsdk/flows (0.2.3):
+  - fluigsdk (0.2.4):
+    - fluigsdk/core (= 0.2.4)
+    - fluigsdk/flows (= 0.2.4)
+    - fluigsdk/ui (= 0.2.4)
+  - fluigsdk/core (0.2.4)
+  - fluigsdk/flows (0.2.4):
     - fluigsdk/core
     - fluigsdk/ui
-  - fluigsdk/ui (0.2.3)
+  - fluigsdk/ui (0.2.4)
   - SwiftGen (5.2.1)
 
 DEPENDENCIES:
-  - fluigsdk (from `https://github.com/fluig/fluigsdkios`, tag `0.2.3`)
+  - fluigsdk (from `https://github.com/fluig/fluigsdkios`, tag `0.2.4`)
   - SwiftGen
 
 EXTERNAL SOURCES:
   fluigsdk:
     :git: https://github.com/fluig/fluigsdkios
-    :tag: 0.2.3
+    :tag: 0.2.4
 
 CHECKOUT OPTIONS:
   fluigsdk:
     :git: https://github.com/fluig/fluigsdkios
-    :tag: 0.2.3
+    :tag: 0.2.4
 
 SPEC CHECKSUMS:
-  fluigsdk: a9d15510aad727960b76048dff3380e9faad3008
+  fluigsdk: 0dca63d45e891400f4a38010db8124d5ecbdf857
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
 
-PODFILE CHECKSUM: 4dd4f683af980e39acc47b9e90e69253178a8b2d
+PODFILE CHECKSUM: 2afbac4a1e54963b1f7bf887e4438ab348505a38
 
 COCOAPODS: 1.4.0
