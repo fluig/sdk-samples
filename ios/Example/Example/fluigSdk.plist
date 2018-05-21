@@ -5,6 +5,6 @@
 	<key>consumerKey</key>
 	<string>my_consumer_key</string>
 	<key>consumerSecret</key>
-	<string>my_consumer_key</string>
+	<string>my_consumer_secret</string>
 </dict>
 </plist>
